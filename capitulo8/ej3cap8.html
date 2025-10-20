@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej2cap8</title>
+</head>
+<body>
+    <h2><strong>INFORMACIÓN DEL PRODUCTO</strong></h2>
+
+
+
+<fieldset><legend>Datos Personales</legend>
+
+ <p>Nombre:<br>
+ <input type=" text" name="nombre" maxlength="30" size="55" />
+</p>
+
+<p>
+Descripción:<br>
+<textarea name="descripcion" rows="6" cols="80" maxlength="1000"></textarea>
+</p>
+
+<p> 
+ Foto: <input type="file" name="adjunto" />
+</p>
+
+<p>
+<input name="puesto_directivo" type="checkbox" value="Suscribirme al boletín de novedades"  />
+ <strong>Añadir contador de visitas </strong>
+</p>
+</fieldset>
+
+ 
+<fieldset><legend>Datos económicos</legend>
+Precio: <input type=" text" name="nombre" maxlength="30" size="1" />€ 
+&nbsp;&nbsp;
+<p>
+<form id="formulario" method="post" action="”>
+<label for="programa">Impuestos</label> <br/>
+<select id="programa" name="programa">
+ <option value="Windows"
+selected="selected">4%</option>
+ <option value="Mac">7%</option>
+ <option value="Linux">16%</option>
+ <option value="Other">21%</option>
+ </optgroup> 
+</p>
+
+<br>
+
+<p>Promoción: <br/>
+<input type="radio" name=”estado" value=”Ninguno"
+checked="checked" /> Ninguno
+<input type="radio" name=”estado" value=”Transporte gratuito" /
+> Transporte gratuito
+<input type="radio" name=”estado" value=”Descuento 10%" /
+> Descuento 10%
+</p>
+
+
+</fieldset>
+</body>
+</html>

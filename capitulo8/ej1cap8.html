@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej1cap8</title>
+</head>
+
+<body>
+    <form action="new_cv.php" method="post" enctype="multipart/form-data">
+    
+<h1><strong>MI NUEVO CV</strong></h1>
+
+ <p>Escribe tu nombre:<br>
+ <input type=" text" name="nombre" maxlength="30" />
+    </p>
+    <p>
+        Escribe tu apellido:<br>
+        <input type="text" name="nombre" maxlength="80" size="42" />
+    </p>
+    <p>
+        Escribe tu contraseña:<br>
+        <input type="password" name="nombre" maxlength="10" />
+    </p>
+    <p>
+        Escribe tu DNI:<br>
+        <input type="text" name="nombre" size="10" />
+    </p>
+    <p>
+        Sexo: <br />
+        <input type="radio" name=”estado" value=”Hombre" /> Hombre
+        <input type="radio" name=”estado" value=”Mujer" /> Mujer
+    </p>
+
+
+    Añadir archivo: <input type="file" name="adjunto" />
+
+    <p>
+        <input name="puesto_directivo" type="checkbox" value="Suscribirme al boletín de novedades" checked="checked" />
+        <strong>Suscribirme al boletín de novedades </strong>
+    </p>
+
+    <p>
+        <input type="submit" name="Guardar Cambios" value="Guardar cambios" />
+        <input type="reset" name="Borrar datos" value="Borrar datos" />
+
+
+    </p>
+
+
+
+
+    </form>
+</body>
+
+</html>
