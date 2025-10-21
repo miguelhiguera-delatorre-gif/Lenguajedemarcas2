@@ -42,22 +42,31 @@ Precio: <input type=" text" name="nombre" maxlength="30" size="1" />€
 <select id="programa" name="programa">
  <option value="Windows"
 selected="selected">4%</option>
- <option value="Mac">7%</option>
- <option value="Linux">16%</option>
- <option value="Other">21%</option>
+ <option value="7">7%</option>
+ <option value="16">16%</option>
+ <option value="21">21%</option>
  </optgroup> 
 </p>
 
+<p>Promoción:</p>
+
+<label>
+  <input type="radio" name="estado" value="Ninguno" checked="checked" />
+  Ninguno
+</label>
 <br>
 
-<p>Promoción: <br/>
-<input type="radio" name=”estado" value=”Ninguno"
-checked="checked" /> Ninguno
-<input type="radio" name=”estado" value=”Transporte gratuito" /
-> Transporte gratuito
-<input type="radio" name=”estado" value=”Descuento 10%" /
-> Descuento 10%
-</p>
+<label>
+  <input type="radio" name="estado" value="Transporte gratuito" />
+  Transporte gratuito
+</label>
+<br>
+
+<label>
+  <input type="radio" name="estado" value="Descuento 10%" />
+  Descuento 10%
+</label>
+
 
 
 </fieldset>
