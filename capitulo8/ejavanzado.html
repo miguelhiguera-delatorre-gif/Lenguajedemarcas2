@@ -36,17 +36,49 @@ Biografía(opcional):
 <fieldset><legend>Preferencias avanzadas</legend>
 
 
-<label>Color favorito:</label><br>
-<input type="radio" name="color" value="azul" id="azul">
-<label for="azul"><img src="../imágenes/botonazul.png" alt="Azul" width="40"></label>
 
-<input type="radio" name="color" value="rojo" id="rojo">
-<label for="rojo"><img src="../imágenes/botonrojo.png" alt="Rojo" width="40"></label>
+<form id="formulario" method="post" action="">
+  <label for="programa">Recibir notificaciones:</label>
+  <select id="programa" name="programa">
+    <option value="Windows" selected>Si</option>
+    <option value="7">No</option>
+  </select>
 
-<input type="radio" name="color" value="morado" id="morado">
-<label for="morado"><img src="../imágenes/botonmorado.png" alt="Morado" width="40"></label>
+  <label for="adjunto" style="margin-left: 20px;">Subir avatar (imagen):</label>
+  <input type="file" name="adjunto" id="adjunto">
+
+
+  <label for="nivel">Nivel de privacidad:</label>
+<input type="range" id="nivel" name="nivel de privacidad" min="0" max="100" value="50">
+
+
+
+
+
+</form>
+
+
+
+ Notas extra:<br>
+<textarea name="descripcion" rows="2" cols="20" maxlength="1000"></textarea>
+
+
+
+
+
 
 
 </fieldset>
+
+
+ <p>
+        <input type="submit" name="Enviar" value="Enviar" />
+        <input type="reset" name="Restablecer" value="Restablecer" />
+
+
+    </p>
+
+
+
 </body>
 </html>
