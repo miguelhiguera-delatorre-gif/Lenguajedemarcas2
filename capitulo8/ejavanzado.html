@@ -6,79 +6,80 @@
     <title>ejavanzado</title>
 </head>
 <body>
-    <h1><strong>Ejercicio avanzado: Formularios</strong></h1>
+   
+<form action="new_cv.php" method="post" enctype="multipart/form-data">
+  
+  
+  
+  
+  <h1><strong>Ejercicio avanzado: Formularios</strong></h1>
 
+  
+  
+  
+ <fieldset>
+    <legend>Datos Personales</legend>
 
+    Nombre:
+    <input type="text" placeholder="Ej: Jesus Fernandez Gil" name="nombre">
 
-<fieldset><legend>Datos Personales</legend>
+    Correo electrónico:
+    <input type="email" placeholder="ejemplo@dominio.com" name="correo">
 
-Nombre:
-<input type=" text" name="nombre" maxlength="30" size="5" />
+    Contraseña:
+    <input type="password" placeholder="8+ caracteres" name="password">
 
+    Edad:
+    <input type="number" placeholder="Ej: 30" name="edad">
 
-Correo eléctronico:
- <input type=" text" name="nombre" maxlength="30" size="5" />
-
- 
-Contraseña:
-<input type="password" name="nombre" maxlength="10" />
-
-
-Edad: <input type=" text" name="nombre" maxlength="30" size="1" />
-&nbsp;&nbsp;
-
-
-Biografía(opcional):
-<textarea name="descripcion" rows="2" cols="35" maxlength="1000"></textarea>
-</fieldset>
+    <br><br>
+    Biografía (opcional):<br><br>
+    <textarea name="descripcion" rows="2" cols="27" maxlength="1000" placeholder="Cuéntanos algo sobre ti..."></textarea>
+  </fieldset>
     
+  
+  
+  
+  
+  
+  
+  <fieldset>
+    <legend>Preferencias avanzadas</legend>
 
-<fieldset><legend>Preferencias avanzadas</legend>
+    Color favorito:
+    <input type="color" name="color">
 
+    <label for="programa">Recibir notificaciones:</label>
+    <select id="programa" name="notificaciones">
+      <option value="Si" selected>Sí</option>
+      <option value="No">No</option>
+    </select>
 
+    <label for="adjunto" style="margin-left: 20px;">Subir avatar (imagen):</label>
+    <input type="file" name="adjunto" id="adjunto">
 
-<form id="formulario" method="post" action="">
-  <label for="programa">Recibir notificaciones:</label>
-  <select id="programa" name="programa">
-    <option value="Windows" selected>Si</option>
-    <option value="7">No</option>
-  </select>
+    <label for="nivel">Nivel de privacidad:</label>
+    <input type="range" id="nivel" name="privacidad" min="0" max="100" value="50">
 
-  <label for="adjunto" style="margin-left: 20px;">Subir avatar (imagen):</label>
-  <input type="file" name="adjunto" id="adjunto">
+    <br><br>
+    Notas extra:<br>
+    <textarea name="notas" rows="2" cols="20" maxlength="1000" placeholder="Opcional"></textarea>
+  </fieldset>
 
-
-  <label for="nivel">Nivel de privacidad:</label>
-<input type="range" id="nivel" name="nivel de privacidad" min="0" max="100" value="50">
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  <p>
+    <input type="submit" name="Enviar" value="Enviar">
+    <input type="reset" name="Restablecer" value="Restablecer">
+  </p>
 
 </form>
-
-
-
- Notas extra:<br>
-<textarea name="descripcion" rows="2" cols="20" maxlength="1000"></textarea>
-
-
-
-
-
-
-
-</fieldset>
-
-
- <p>
-        <input type="submit" name="Enviar" value="Enviar" />
-        <input type="reset" name="Restablecer" value="Restablecer" />
-
-
-    </p>
-
-
 
 </body>
 </html>
