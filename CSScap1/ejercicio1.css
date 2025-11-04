@@ -39,3 +39,47 @@ color: rgb(115, 197, 149);
 
 #colorrojo{
 color: rgb(206, 27, 27);
+}
+
+#titulo2{
+color: rgb(15, 0, 152);
+
+
+}
+
+#coloramarillo{
+color: rgb(209, 153, 1);
+
+
+}
+
+#colorverde{
+color: rgb(25, 152, 0);
+
+
+}
+
+#colormorado{
+color: rgb(152, 0, 147);
+
+
+}
+
+#colorvioleta{
+color: rgb(232, 105, 228);
+
+
+}
+
+#subrayadooo {
+    color: rgb(10, 216, 41);
+    text-decoration: underline;             
+    text-decoration-color: rgb(10, 216, 41);  
+
+}
+
+#titulo3{
+color: rgb(7, 213, 151);
+
+
+}
