@@ -35,8 +35,55 @@ img { border: none; }
 #pie .copyright { float: right; }
 
 
- /* Ejercicio1 */
+/* Ejercicio1 */
 #cabecera{
     padding:1em;
 }
 
+/* Ejercicio2 */
+ #menu{
+    padding:0.5em;
+    margin-bottom:0.5em;
+ }
+
+/* Ejercicio3 */
+#noticias,
+#publicidad,
+#contenidoprincipal,
+#contenidosecundario{
+    padding:0.5em;
+}
+
+#pie{
+    clear:both;
+    padding:1em;
+}
+
+
+/* Ejercicio4 */
+
+#contenidoprincipal .articulo{
+margin-bottom: 1em;
+}
+
+/* Ejercicio5 */
+
+#contenidoprincipal .articulo img{
+
+width:1000px;
+float:left;
+margin: 0.5em;
+}
+
+/* Ejercicio6 */
+#publicidad{
+margin-top: 1em ;
+}
+
+/* Ejercicio7 */
+
+#pie{
+    clear:both;
+    padding: 1em;
+    margin-top: 1em;
+}
