@@ -1,63 +1,139 @@
+/* ============================================================
+   1. Eliminar el borde gris que muestran por defecto todos los elementos.
+   ============================================================ */
+
+#cabecera, #menu, #lateral, #contenido, #contenido #principal, 
+#contenido #secundario, #pie {
+    border: none; /* Eliminamos bordes gris por defecto */
+}
+
+/* ============================================================
+   2. El elemento #menu debe tener un borde inferior azul de 1px.
+   ============================================================ */
+
+#menu { 
+    clear: both; 
+    border-bottom: 1px solid #004C99; /* Borde inferior azul */
+}
+
+/* ============================================================
+   3. El elemento #noticias muestra un borde de 1px gris claro.
+   ============================================================ */
+
+#noticias { 
+    border: 1px solid #C5C5C5; /* Borde gris claro */
+    padding: 0.5em;
+}
+
+/* ============================================================
+   4. El elemento #publicidad debe mostrar un borde discontinuo 
+      de 1px y de color #CC6600.
+   ============================================================ */
+
+#publicidad { 
+    border: 1px dashed #CC6600; /* Borde discontinuo naranja */
+    padding: 0.5em; 
+    margin-top: 1em;
+}
+
+/* ============================================================
+   5. El lateral formado por el elemento #secundario muestra 
+      un borde de 1px y color #CC6600.
+   ============================================================ */
+
+#secundario .bloque {
+    background-color: #ffffff;
+    border: 1px solid #CC6600; /* Borde naranja */
+    padding: 0.6em;
+    margin-bottom: 1em;
+    border-radius: 6px;
+}
+
+/* ============================================================
+   6. El elemento #pie debe mostrar borde superior e inferior 
+      de 1px en color gris claro.
+   ============================================================ */
+
+#pie { 
+    clear: both; 
+    border-top: 1px solid #C5C5C5;    /* Borde superior gris claro */
+    border-bottom: 1px solid #C5C5C5; /* Borde inferior gris claro */
+}
+
+
+
+
 ul, ul li { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, p, form { margin: 0; padding: 0; }
+
+/* Elimina bordes de imágenes */
 img { border: none; }
+
+/* Clase para limpiar flotados */
 .clear { clear: both; }
 
-/* Layout general */
+/* Contenedor principal */
 #contenedor {
     width: 90%;
     max-width: 900px;
     margin: auto;
 }
 
-/* Eliminamos bordes grises por defecto */
-#cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario, #pie {
-    border: none;
+/* Cabecera general */
+#cabecera { 
+    clear: both; 
+    padding: 1em; 
 }
 
-/* Estructura general */
-#cabecera { clear: both; }
-#menu { clear: both; border-bottom: 1px solid #004C99; }
-
-#lateral { float: left; width: 20%; }
-#contenido { float: right; width: 78%; overflow: hidden; }
-
-#contenido #principal { float: left; width: 74%; }
-#contenido #secundario { float: right; width: 24%; }
-
-#pie { clear: both; border-top: 1px solid #C5C5C5; border-bottom: 1px solid #C5C5C5; }
-
-/* Bordes y rellenos */
-#noticias { border: 1px solid #C5C5C5; padding: 0.5em; }
-#publicidad { border: 1px dashed #CC6600; padding: 0.5em; margin-top: 1em; }
-
-/* Cabecera */
-#cabecera {
-    padding: 1em;
+/* Columnas principales */
+#lateral { 
+    float: left; 
+    width: 20%; 
 }
-#cabecera #logo { float: left; }
-#cabecera #buscador { float: right; }
 
-/* Menú principal */
-#menu ul#menu_principal li { display: inline; float: left; margin-right: 0.5em; }
+#contenido { 
+    float: right; 
+    width: 78%; 
+    overflow: hidden; 
+}
 
-/* Artículos */
+/* Distribución interior del contenido */
+#contenido #principal { 
+    float: left; 
+    width: 74%; 
+}
+
+#contenido #secundario { 
+    float: right; 
+    width: 24%; 
+}
+
+/* Logo dentro de cabecera */
+#cabecera #logo { 
+    float: left; 
+}
+
+/* Buscador en cabecera */
+#cabecera #buscador { 
+    float: right; 
+}
+
+/* Menú principal en horizontal */
+#menu ul#menu_principal li { 
+    display: inline; 
+    float: left; 
+    margin-right: 0.5em; 
+}
+
+/* Artículos del contenido principal */
 #contenido #principal .articulo img {
     width: 100px;
     float: left;
     margin: 0.5em;
 }
+
 #contenido #principal .articulo {
     margin-bottom: 1em;
-}
-
-/* Bloques naranjas del lateral derecho */
-#secundario .bloque {
-    background-color: #ffffff;
-    border: 1px solid #CC6600;
-    padding: 0.6em;
-    margin-bottom: 1em;
-    border-radius: 6px;
 }
 
 /* Pie de página */

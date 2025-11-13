@@ -1,9 +1,81 @@
+/* ============================================================
+   1. Los elementos #noticias y #pie tienen un color de fondo 
+      gris claro (#F8F8F8).
+   ============================================================ */
+
+#noticias { 
+    border: 1px solid #C5C5C5;
+    padding: 0.5em;
+    background-color: #F8F8F8; /* Fondo gris claro */
+}
+
+#pie {
+    clear: both;
+    border-top: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+    background-color: #e5e3e3; /* Fondo gris claro (indicado como punto 1 en código) */
+}
+
+/* ============================================================
+   2. El elemento #publicidad muestra un color de fondo 
+      amarillo claro (#FFF6CD).
+   ============================================================ */
+
+#publicidad { 
+    border: 1px dashed #CC6600;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: #FFF6CD; /* Fondo amarillo claro */
+}
+
+/* ============================================================
+   3. Los elementos <h2> del lateral #secundario muestran un 
+      fondo #DB905C y padding de 0.2em.
+   ============================================================ */
+
+#secundario h2 {
+    background-color: #DB905C; /* Fondo */
+    padding: 0.2em;            /* Espaciado */
+    margin-bottom: 0.5em;
+}
+
+/* ============================================================
+   4. El fondo del elemento #menu se construye mediante la imagen
+      fondo_menu.gif.
+   ============================================================ */
+
+#menu { 
+    clear: both; 
+    border-bottom: 1px solid #004C99;
+    background-image: url('imagenes/fondo_menu.gif'); /* Imagen de fondo */
+    background-repeat: repeat;
+}
+
+/* ============================================================
+   5. El logotipo del sitio se muestra mediante una imagen de fondo
+      del <h1> dentro de #cabecera.
+   ============================================================ */
+
+#cabecera #logo h1 {
+    background-image: url('imagenes/logo.gif'); /* Imagen del logo */
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-indent: -9999px;
+    height: 60px;
+    width: 200px;
+    overflow: hidden;
+}
+
+
+
+
+
 ul, ul li { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, p, form { margin: 0; padding: 0; }
 img { border: none; }
 .clear { clear: both; }
 
-/* Layout general */
+
 #contenedor {
     width: 90%;
     max-width: 900px;
@@ -11,74 +83,46 @@ img { border: none; }
 }
 
 /* Eliminamos bordes grises por defecto */
-#cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario, #pie {
+#cabecera, #menu, #lateral, #contenido, 
+#contenido #principal, #contenido #secundario, #pie {
     border: none;
 }
 
 /* Estructura general */
-#cabecera { clear: both; padding: 1em; }
-#menu { clear: both; border-bottom: 1px solid #004C99; 
-    background-image: url('imagenes/fondo_menu.gif'); /* Punto 4 */
-    background-repeat: repeat;
+#cabecera { 
+    clear: both; 
+    padding: 1em; 
 }
 
+/* Lateral y contenido principal */
 #lateral { float: left; width: 20%; }
 #contenido { float: right; width: 78%; overflow: hidden; }
-
 #contenido #principal { float: left; width: 74%; }
 #contenido #secundario { float: right; width: 24%; }
 
-/* Bordes y rellenos */
-#noticias { 
-    border: 1px solid #C5C5C5; 
-    padding: 0.5em; 
-    background-color: #F8F8F8; /* Punto 1 */
-}
+/* Cabecera: posición del logo y buscador */
+#cabecera #logo { float: left; }
+#cabecera #buscador { float: right; }
 
-#publicidad { 
-    border: 1px dashed #CC6600; 
-    padding: 0.5em; 
-    margin-top: 1em;
-    background-color: #FFF6CD; /* Punto 2 */
-}
-
-/* Cabecera */
-#cabecera #logo { 
-    float: left; 
-}
-
-#cabecera #logo h1 {
-    background-image: url('imagenes/logo.gif'); /* Punto 5 */
-    background-repeat: no-repeat;
-    background-position: left center;
-    text-indent: -9999px;
-    height: 60px; /* Ajusta según tamaño real de logo.gif */
-    width: 200px; /* Ajusta según tamaño real de logo.gif */
-    overflow: hidden;
-}
-
-#cabecera #buscador { 
-    float: right; 
-}
-
-/* Menú principal */
+/* Menú principal en horizontal */
 #menu ul#menu_principal li { 
     display: inline; 
     float: left; 
     margin-right: 0.5em; 
 }
 
-/* Artículos */
+/* Artículos dentro del contenido */
 #contenido #principal .articulo img {
     width: 100px;
     float: left;
     margin: 0.5em;
 }
+
 #contenido #principal .articulo {
     margin-bottom: 1em;
 }
 
-/* Bloques naranjas del lateral derecho */
+/* Bloques del lateral derecho */
 #secundario .bloque {
     background-color: #ffffff;
     border: 1px solid #CC6600;
@@ -87,28 +131,13 @@ img { border: none; }
     border-radius: 6px;
 }
 
-/* h2 dentro de #secundario */
-#secundario h2 {
-    background-color: #DB905C; /* Punto 3 */
-    padding: 0.2em;            /* Punto 3 */
-    margin-bottom: 0.5em;
-}
-
 /* Pie de página */
-#pie {
-    clear: both; 
-    border-top: 1px solid #C5C5C5; 
-    border-bottom: 1px solid #C5C5C5;
-    background-color: #F8F8F8; /* Punto 1 */
-}
-
 #pie .enlaces { float: left; }
 #pie .copyright { float: right; }
 
-
-/* Rectángulo azul de 4px de alto que ocupa todo el ancho */
+/* Barra decorativa azul */
 #barra-azul {
     width: 100%;
     height: 40px;
-    background-color: blue; /* o el azul que prefieras, por ejemplo #0000FF */
+    background-color: blue;
 }
