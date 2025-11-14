@@ -59,12 +59,9 @@
 
 #cabecera #logo h1 {
     background-image: url('imagenes/logo.gif'); /* Imagen del logo */
-    background-repeat: no-repeat;
-    background-position: left center;
-    text-indent: -9999px;
     height: 60px;
     width: 200px;
-    overflow: hidden;
+   
 }
 
 
