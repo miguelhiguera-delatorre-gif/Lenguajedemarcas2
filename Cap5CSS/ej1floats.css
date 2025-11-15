@@ -1,7 +1,65 @@
-#Navbar{
-border: 2px solid #CCC;
-background-color: aquamarine;
-padding: 1em;
-margin: 1em 0 1em 4em;
-width: 500px;
+body{
+    text-align: center;
 }
+
+#Navbar{
+    border: 2px solid #CCC;
+    background-color: aquamarine;
+    padding: 0.5em;
+    margin: 1em auto;
+    margin-bottom: 8px;
+    width: 533px;
+    height: 40px;
+}
+
+#Section1{
+    border: 2px solid #CCC;
+    background-color: rgb(196, 23, 23);
+    padding: 0.5em;
+    margin-left:356px ;
+    margin-right:0px ;
+    margin-top:1px ;
+    margin-bottom:0px ;
+    width: 531px;
+    height: 80px;
+}
+
+
+#Sectionfila{
+    width: 907px;
+    margin: 1em 0;
+    display: flex; /* flex hace que section 2 y 3 puedan estar juntos en fila*/
+    gap: 0em; /* gap es para poner espacios entre ellos*/
+    margin-top: 0px;
+}
+
+#Section2{
+    border: 2px solid #CCC;
+    background-color: rgb(209, 104, 12);
+    padding: 0.5em;
+    
+    margin-left: 356px;
+    width: 453px;
+    height: 80px;
+}
+
+#Section3{
+    border: 2px solid #CCC;
+    background-color: rgb(231, 85, 187);
+    padding: 0.5em;
+
+    width:449px;
+    height: 80px;
+}
+
+#Footer{
+    border: 2px solid #CCC;
+    background-color: rgb(127, 178, 255);
+    padding: 0.5em;
+    margin-top: 0;
+    margin-left: 355px;
+    width: 533px;
+    height: 40px;
+}
+
+

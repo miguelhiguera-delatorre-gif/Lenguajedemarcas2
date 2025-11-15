@@ -1,0 +1,62 @@
+/* Los media queries son como condicionales if si mide esto hacer esto */
+body{
+    text-align: center;
+}
+
+/* ORDENADOR */
+@media (min-width: 1025px) {
+  }
+
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+ }
+
+
+
+
+
+
+
+
+
+
+ /* MÓVIL */
+@media (max-width: 600px) {
+    #header{
+    border: 2px solid #ffffff;
+    background-color: rgb(172, 212, 247);
+    padding: 0.5em;
+    width: 600px;
+    height: 200px;
+}
+ #Content{
+    border: 2px solid #ffffff;
+    background-color: rgb(95, 161, 218);
+    padding: 0.5em;
+    width: 600px;
+    height: 600px;
+}
+
+#Sidebar1{
+    border: 2px solid #ffffff;
+    background-color: rgb(43, 101, 152);
+    padding: 0.5em;
+    width: 600px;
+    height: 200px;
+}
+
+#Sidebar2{
+    border: 2px solid #ffffff;
+    background-color: rgb(0, 80, 150);
+    padding: 0.5em;
+    width: 600px;
+    height: 200px;
+}
+ 
+
+
+}
+
+
+
+
