@@ -7,6 +7,7 @@ body{
     background-color: aquamarine;
     padding: 0.5em;
     margin: 1em auto;
+    margin-left:356px ;
     margin-bottom: 8px;
     width: 533px;
     height: 40px;
@@ -37,7 +38,7 @@ body{
     border: 2px solid #CCC;
     background-color: rgb(209, 104, 12);
     padding: 0.5em;
-    
+    margin-bottom: 0;
     margin-left: 356px;
     width: 453px;
     height: 80px;
@@ -47,7 +48,7 @@ body{
     border: 2px solid #CCC;
     background-color: rgb(231, 85, 187);
     padding: 0.5em;
-
+    margin-bottom: 0;
     width:449px;
     height: 80px;
 }

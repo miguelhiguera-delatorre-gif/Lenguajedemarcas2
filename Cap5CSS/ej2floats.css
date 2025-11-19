@@ -1,0 +1,83 @@
+#rojo1{
+    background-color: rgb(255, 66, 52);
+    padding: 150px;
+    width: 150px;
+    height: 60px;
+    float:left;
+}
+
+#verde1{
+    background-color: rgb(110, 255, 52);
+    padding: 75px;
+    width: 75px;
+    height: 30px;
+    float:left;
+}
+
+#amarillo1{
+    background-color: rgb(243, 239, 9);
+    padding: 75px;
+    width: 75px;
+    height: 30px;
+    float:left;
+}
+
+
+.clear {
+    clear: left;
+}
+
+
+#azul1{
+    background-color: rgb(53, 83, 255);
+   
+    padding: 75px;
+    width: 75px;
+    height: 30px;
+    float:left;
+}
+
+#morado1{
+    
+    background-color: rgb(202, 9, 250);
+    padding: 75px;
+    width: 75px;
+    height: 30px;
+    float:left;
+}
+
+
+
+
+
+
+
+/* BLOQUE NEWS */
+#bloque{
+    clear: both;
+    margin-top: 40px;
+}
+
+#rojo2{
+    background-color: rgb(255, 66, 52);
+    padding: 75px;
+    width: 150px;
+    height: 60px;
+    float:left;
+}
+
+#verde2{
+    background-color: rgb(110, 255, 52);
+    padding: 75px;
+    width: 150px;
+    height: 60px;
+    float:left;
+}
+
+#azul2{
+    background-color: rgb(53, 83, 255);
+    padding: 75px;
+    width: 150px;
+    height: 60px;
+    float:left;
+}
