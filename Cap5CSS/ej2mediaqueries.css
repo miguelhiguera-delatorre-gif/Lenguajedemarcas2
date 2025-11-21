@@ -1,5 +1,5 @@
 /* MÓVIL 320px */
-@media (max-width: 480px) {
+@media (max-width: 320px) {
 
     div {
         float: none;
@@ -39,7 +39,7 @@
 
 
 /* TABLET 768px */
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 320px) and (max-width: 768px) {
 
     div {
         float: none;
@@ -72,14 +72,23 @@
 
     #Sidebar4 {
         background: lightgray;
-        height: 100px;
+        height: 50px;
     }
+    
+     #Sidebar5 {
+        background: rgb(164, 9, 9);
+        height: 50px;
+      
+    }
+
 }
 
 
 
+
+
 /* ORDENADOR 1024px */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 
     div { 
         float: left;
@@ -88,26 +97,26 @@
 
     #header {
         background: orange;
-        width: 512px;
+        width: 506px;
         height: 80px;
     }
 
     #header2 {
         background: rgb(255, 230, 140);
-        width: 512px;
+        width: 506px;
         height: 80px;
     }
 
     #Content {
         background: yellow;
-        width: 1024px;
+        width: 1022px;
         height: 300px;
         clear: both;
     }
 
     #Sidebar1, #Sidebar2, #Sidebar3 {
         background: #4fa3ff;
-        width: 341px;
+        width: 334px;
         height: 200px;
     }
 

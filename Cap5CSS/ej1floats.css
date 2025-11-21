@@ -38,7 +38,7 @@ body{
     border: 2px solid #CCC;
     background-color: rgb(209, 104, 12);
     padding: 0.5em;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     margin-left: 356px;
     width: 453px;
     height: 80px;
@@ -48,7 +48,7 @@ body{
     border: 2px solid #CCC;
     background-color: rgb(231, 85, 187);
     padding: 0.5em;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     width:449px;
     height: 80px;
 }
@@ -57,7 +57,7 @@ body{
     border: 2px solid #CCC;
     background-color: rgb(127, 178, 255);
     padding: 0.5em;
-    margin-top: 0;
+    margin-top: 0px;
     margin-left: 355px;
     width: 533px;
     height: 40px;
