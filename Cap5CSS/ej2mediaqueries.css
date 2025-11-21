@@ -31,7 +31,7 @@
     }
 
     #Sidebar4 {
-        background: lightgray;
+        background: rgb(199, 199, 199);
         height: 70px;
     }
 }
@@ -86,12 +86,16 @@
         background: lightgray;
         height: 50px;
         width:384px;
-   
+   display:inline-block;
     }
      #Sidebar7 {
         background: lightgray;
         height: 50px;
         width:384px;
+        display:inline-block;
+        
+        
+
        
     }
     
@@ -141,7 +145,7 @@
         width: 1024px;
         height: 120px;
         clear: both;
-
+  display:inline-block;
          }
      #Sidebar5 {
         background: lightgray;
@@ -153,13 +157,15 @@
         background: lightgray;
         height: 50px;
         width:384px;
+     display:inline-block;
+   
    
     }
      #Sidebar7 {
         background: lightgray;
         height: 50px;
         width:384px;
-       
+         display:inline-block;
     }
     }
 
