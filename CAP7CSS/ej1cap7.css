@@ -1,0 +1,17 @@
+/* Enlace normal */
+a:link {
+    color: #CC0000;
+    
+}
+
+/* Enlace cuando el cursor pasa encima */
+a:hover {
+    background-color: #CC0000;
+    color: #FFF;
+    padding: 2px 4px; 
+}
+
+/* Enlace visitado */
+a:visited {
+    color: #CCC;
+}
