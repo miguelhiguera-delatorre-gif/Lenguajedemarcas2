@@ -1,0 +1,45 @@
+
+#titulo{
+ text-align: center;
+  color: #48b8f0;
+}
+#registro{
+ text-align: center;
+  
+}
+
+
+#bordetabla { 
+    border: 1px dashed #00ccc2;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: #FFF6CD; /* Fondo amarillo claro */
+}
+
+#bordetabla1 { 
+    border: 1px dashed #00ccc2;
+    padding: 0.5em;
+    margin-top: 1em;
+    background-color: #FFF6CD; /* Fondo amarillo claro */
+}
+
+
+#colorfondo{
+ background-color: #c0f5f0;
+width: 300px;
+}
+
+#Enviar{
+     text-align: center;
+ color: #73f985;
+width: 300px;
+}
+
+#borrar{
+     text-align: center;
+color: #fd7b7b;
+width: 300px;
+}
+
+
+

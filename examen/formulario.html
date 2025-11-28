@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion</title>
+</head>
+<body>
+    <form action="registro.html" method="post" enctype="multipart/form-data">
+
+ <h1>Formulario de registro deportivo</h1>
+   Completa todos los campos obligatorios para registrarse.
+    <br><br>
+  
+  
+  
+  
+  <div id="bordetabla1">
+    <fieldset>
+        <div id="colorazul">
+    <legend>Datos Personales</legend>
+
+   <p> Nombre*:
+    <input type="text" placeholder="max 20" name="nombre" required>
+</p>
+    <p>Apellidos*:
+    <input type="text"  min="4" max="30"placeholder="max 20" name="nombre" required>
+</p>
+    <p>Edad*:
+    <input type="number" step="1" min="20" max="50" placeholder="18-46 cada medio año" name="edad" required>
+    </p>
+    <p>Fecha de nacimiento*:
+    <input type="date" name="fecha de nacimiento" required>
+    <br>
+    (formato:aaaa-mm-dd)
+</p>
+    
+    <p>Correo electrónico*:
+    <input type="email" name="correo" required>
+</p>
+   </div>
+   
+  </fieldset>
+    
+
+
+
+
+
+ <div id="fieldset2">
+<fieldset><legend>Modalidades deportivas</legend>
+
+ <input type="radio" name="estado" value="Ninguno" checked>
+    Futbol
+  </label>
+
+  <label>
+    <input type="radio" name="estado" value="Transporte gratuito">
+    Baloncesto
+  </label><br>
+<br><br>
+<label for="programa">Nivel:</label>
+    <select id="programa" name="notificaciones">
+      <option value="Intermedio" selected>Intermedio</option>
+      <option value="Alto">Alto</option>
+       <option value="Najo">Bajo</option>
+    </select>
+
+
+</fieldset>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div id="bordetabla">
+<fieldset><legend>Días disponibles</legend>
+
+
+<input name="puesto_directivo" type="checkbox" value="Suscribirme al boletín de novedades"  />
+ Lunes
+<br>
+<input name="puesto_directivo" type="checkbox" value="Suscribirme al boletín de novedades"  />
+ Miercoles
+
+
+
+<label>
+   
+   
+   Seguro escolar ya tramitado
+    <input type="radio" name="estado" value="Ninguno" checked>
+    Si
+  </label>
+
+  <label>
+    <input type="radio" name="estado" value="Transporte gratuito">
+    No
+  </label><br>
+
+
+</fieldset>
+</div>
+<a href="index.html"><img src="imagenes/volver.png" alt="Imagen generica" /> </a>
+
+
+
+<div id="Enviar"> <input type="submit" name="Enviar registro" value="Enviar registro" /></div>
+
+<div id="borrar"> <input type="reset" name="Borrar registro" value="Borrar registro" /></div>
+</form>
+</body>
+</html>
