@@ -1,0 +1,22 @@
+
+.tabla{
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.fila1{
+background-color: rgba(137, 153, 155, 0.863);
+}
+
+.azul{
+    background-color: rgba(187, 239, 255, 0.863);
+}
+
+.amarillo{
+    background-color:rgba(232, 255, 24, 0.863)
+}
+
+th, td{font-family: 'Arial'}
+
+.izq {float: left;}
+
