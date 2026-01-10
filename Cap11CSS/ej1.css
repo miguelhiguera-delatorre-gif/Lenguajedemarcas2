@@ -1,0 +1,149 @@
+body{
+    margin: 1em;
+    padding: 0;
+
+}
+
+form{
+    width: 700px;
+}
+
+/*Nombre y Apellidos*/
+
+label{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.nombreape {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: grey;
+    margin-bottom: 0.5em;
+    
+}
+
+.asterisco{
+color: red;
+}
+
+.fondoNombre:hover{
+    background-color: yellow;
+}
+
+.fondoNombre{
+   
+    display: inline-block;
+  
+}
+
+
+#nombre{
+    border-radius: 0;
+    border-color: white grey grey white;
+}
+
+#nombre:hover{
+    border: 2px solid #e6b700;
+}
+
+
+
+/*Dirección*/
+
+#direccion:hover {
+    border: 2px solid #e6b700;
+}
+
+.fondoDireccion:hover{
+    background-color: yellow;
+   
+}
+
+#direccion{
+    border-radius: 0;
+    border-color: white grey grey white;
+}
+
+
+    
+.fondoNombre,
+.fondoDireccion {
+    
+    vertical-align: top;   /* para que queden alineados arriba */
+   
+
+
+}
+
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+
+.campo label {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.campo select {
+  height: 38px;
+  padding: 6px 10px;
+  font-size: 15px;
+
+  border: 2px solid #cfcfcf;
+  border-radius: 3px;
+  background-color: white;
+
+
+}
+
+.juntos {
+  width: 38%;
+    display: inline-block; 
+  vertical-align: top; /* importante */
+  margin-right: -15px;
+}
+/* Esto es para poner juntos los cuadrados de el formulario  */
+
+.formujuntos {
+    display: flex;
+    gap: 40px;              /* separación entre los bloques */
+    align-items: flex-start;
+}
+
+
+/* Email */
+
+.fondoemail{
+    width: 25%;
+}
+.fondoemail:hover{
+    background-color: yellow;
+   
+}
+
+
+/* Telefono */
+
+.fondotlf{
+    width: 38%;
+}
+
+.fondotlf:hover{
+    background-color: yellow;
+   
+}
+
+.separacion{
+    margin-left: 2.6em;
+}
+
+
+
+#alta{
+margin-left: 25.5em;
+}

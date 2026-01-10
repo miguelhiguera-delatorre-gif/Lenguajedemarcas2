@@ -5,61 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ej1cap8</title>
+    <link rel="stylesheet" href="ej1.css">
 </head>
 
 <body>
     <form action="new_cv.php" method="post" enctype="multipart/form-data">
     
-<h1><strong>Formulario de alta</strong></h1>
+        <h1><strong>Formulario de alta</strong></h1>
 
-Nombre
-        <input type=" text" name="nombre" maxlength="30" />
-Primer apellido
-        <input type="text" name="nombre" maxlength="80" size="42" />
-Segundo apellido
-        <input type="text" name="nombre" maxlength="80" size="42" />
-   
+<div class="formujuntos">
+        <div class="fondoNombre">
+        
 
+                <label for="nombre"><strong>Nombre y Apellidos<span class=asterisco>*</span></strong></label>
+
+                <input type=" text" id="nombre" size="10" />
+                <p class="nombreape">Nombre</p>
+                
+                <input type="text" id="nombre"  size="20" />
+                <p class="nombreape"> Primer apellido</p>
+                
+                <input type="text" id="nombre"  size="20" />
+                <p class="nombreape">Segundo apellido</p>
+                
+    
+        </div>
+
+
+        <div class="fondoDireccion">
+        
+
+                <label for="direccion"><strong>Dirección<span class=asterisco>*</span></strong></label>
+
+                <input type=" text" id="direccion" />
+                <p class="nombreape">Calle, numero, piso, puerta</p>
+                
+
+                
+                        <div>
+                                
+                        </div>
+                        <div class="juntos">
+                        <input type="text" id="direccion"  size="11" />
+                        <p class="nombreape"> Codigo postal</p>
+                        </div>
+
+                        <div class="juntos">
+                       
+                        <input type="text" id="direccion"  size="11" />
+                        <p class="nombreape"> Municipio </p>
+                     
+                        </div>
+
+                        <div class="juntos">
+                        <input type="text" id="direccion"  size="11" />
+                        <p class="nombreape"> Provincia </p>
+                        </div>
+                
+                        <div class="juntos">
+                        <input type="text" id="direccion"  size="11" />
+                        <p class="nombreape"> País </p>
+                        </div>
+                
+                
+        
+        </div>
+
+
+
+</div>
 
 <p></p>
 
 
 
-calle, numero,piso,puerta
-        <input type=" text" name="nombre" maxlength="30" />
-Codigo Postal
-        <input type="text" name="nombre" maxlength="80" size="42" />
-Municipio
-        <input type="text" name="nombre" maxlength="80" size="42" />
-Provincia
-        <input type="text" name="nombre" maxlength="80" size="42" />
-País
-        <input type="text" name="nombre" maxlength="80" size="42" />
-   
 
 
-
-<p></p>
-
-
-
-Email
-        <input type="text" name="nombre" maxlength="80" size="42" />
-
-
-       
-   <p></p>    
-       
-       
-       
-Teléfono fijo
-        <input type="text" name="nombre" maxlength="80" size="42" />
- Movil
-        <input type="text" name="nombre" maxlength="80" size="42" />
+<!-- EMAIL -->
+<div class="formujuntos">
+        <div class="fondoemail">
+                <label for="nombre"><strong>Email</strong></label>
+                <input type=" text" id="nombre" size="20" />
+        </div>          
 
 
+                
+<!-- TELEFONO -->
+        <div class="fondotlf" >
+        <label for="nombre"><strong>Telefono<span class=asterisco>*</span></strong></label>
+               
+                <div class="juntos">
+                        <input type=" text" id="nombre" size="10" />
+                        <p class="nombreape">Fijo</p>
+                </div>
 
 
+                <div class="juntos">
+                     <span class="separacion">  <input type="text" id="nombre"  size="10" />
+                        <p class="nombreape">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Movil</p>
+                        </span> 
+                </div>
+
+        </div>
+</div>
+
+
+  <input type="submit" id="alta" name="Darme de alta➡" value="Darme de alta➡" />
 
     </form>
 </body>
