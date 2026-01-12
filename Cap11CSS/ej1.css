@@ -29,7 +29,7 @@ color: red;
 }
 
 .fondoNombre:hover{
-    background-color: yellow;
+    background-color:  #fbff78;
 }
 
 .fondoNombre{
@@ -37,6 +37,7 @@ color: red;
     display: inline-block;
   
 }
+
 
 
 #nombre{
@@ -57,26 +58,30 @@ color: red;
 }
 
 .fondoDireccion:hover{
-    background-color: yellow;
+    background-color:  #fbff78;
+    
    
 }
+
 
 #direccion{
     border-radius: 0;
     border-color: white grey grey white;
+    
 }
 
 
     
-.fondoNombre,
-.fondoDireccion {
-    
-    vertical-align: top;   /* para que queden alineados arriba */
-   
 
 
+.fondoNombre{
+    vertical-align: top;
 }
 
+.fondoDireccion{
+    vertical-align: top;
+    width: 38%;
+}
 
 .campo {
   display: flex;
@@ -102,17 +107,23 @@ color: red;
 }
 
 .juntos {
-  width: 38%;
+  width: 50%;
     display: inline-block; 
   vertical-align: top; /* importante */
-  margin-right: -15px;
+   margin-right: -11px; 
 }
+
+
 /* Esto es para poner juntos los cuadrados de el formulario  */
 
 .formujuntos {
     display: flex;
-    gap: 40px;              /* separación entre los bloques */
+    gap: 50px;              /* separación entre los bloques */
     align-items: flex-start;
+}
+
+select{
+    width: 83%;
 }
 
 
@@ -122,7 +133,7 @@ color: red;
     width: 25%;
 }
 .fondoemail:hover{
-    background-color: yellow;
+    background-color:  #fbff78;
    
 }
 
@@ -130,11 +141,11 @@ color: red;
 /* Telefono */
 
 .fondotlf{
-    width: 38%;
+    width: 37%;
 }
 
 .fondotlf:hover{
-    background-color: yellow;
+    background-color:  #fbff78;
    
 }
 
@@ -145,5 +156,12 @@ color: red;
 
 
 #alta{
-margin-left: 25.5em;
+margin-left: 26em;
+}
+
+.juntos2 {
+  width: 50%;
+    display: inline-block; 
+  vertical-align: top; /* importante */
+   margin-right: -52px; 
 }

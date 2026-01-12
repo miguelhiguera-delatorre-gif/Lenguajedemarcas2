@@ -37,7 +37,7 @@
 
                 <label for="direccion"><strong>Dirección<span class=asterisco>*</span></strong></label>
 
-                <input type=" text" id="direccion" />
+                <input type=" text" id="direccion"  size="30"/>
                 <p class="nombreape">Calle, numero, piso, puerta</p>
                 
 
@@ -58,12 +58,21 @@
                         </div>
 
                         <div class="juntos">
-                        <input type="text" id="direccion"  size="11" />
-                        <p class="nombreape"> Provincia </p>
+                        <select name="provincia" id="direccion" class="provincia" >
+                            <option value="sevilla">Sevilla</option>
+                            <option value="cadiz">Cádiz</option>
+                            <option value="jerez">Jerez</option>
+                        </select>
+                        <p class="nombreape">Provincia</p>
                         </div>
-                
+                        
                         <div class="juntos">
-                        <input type="text" id="direccion"  size="11" />
+                        <select name="provincia" id="direccion" class="provincia" >
+                            <option value="España">España</option>
+                            <option value="Groenlandia">Groenlandia</option>
+                            <option value="EE.UU">EE.UU</option>
+                            <option value="Japón">Japon</option>
+                        </select>
                         <p class="nombreape"> País </p>
                         </div>
                 
@@ -94,14 +103,14 @@
         <div class="fondotlf" >
         <label for="nombre"><strong>Telefono<span class=asterisco>*</span></strong></label>
                
-                <div class="juntos">
+                <div class="juntos2">
                         <input type=" text" id="nombre" size="10" />
                         <p class="nombreape">Fijo</p>
                 </div>
 
 
-                <div class="juntos">
-                     <span class="separacion">  <input type="text" id="nombre"  size="10" />
+                <div class="juntos2">
+                     <span class="separacion">  <input type="text" id="nombre"  size="11" />
                         <p class="nombreape">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Movil</p>
                         </span> 
                 </div>
