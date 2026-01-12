@@ -1,0 +1,206 @@
+body{
+    margin: 1em;
+    padding: 0;
+
+}
+
+form{
+    width: 700px;
+}
+
+.fondoNombre > label,
+.fondoDireccion label,
+.fondoemail label,
+.fondotlf label {
+    float: left;   /* ajusta a tu gusto */
+}
+
+
+/*Nombre y Apellidos*/
+
+label{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.nombreape {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    color: grey;
+    margin-bottom: 0.5em;
+    
+}
+
+.asterisco{
+color: red;
+}
+
+.fondoNombre:hover{
+    background-color:  #fbff78;
+}
+
+.fondoNombre{
+   width: 100%;
+    display: inline-block;
+    
+  
+}
+
+
+
+#nombre{
+    border-radius: 0;
+    border-color: white grey grey white;
+}
+
+#nombre:hover{
+    border: 2px solid #e6b700;
+}
+
+
+
+/*Dirección*/
+
+#direccion:hover {
+    border: 2px solid #e6b700;
+}
+
+.fondoDireccion:hover{
+    background-color:  #fbff78;
+    
+   
+}
+
+
+.mensaje {
+    display: none;
+    position: absolute;
+    top: 20px;      /* ajusta vertical */
+    right: 10px;    /* lo pone a la derecha */
+    width: 220px;
+    font-size: 12px;
+}
+
+#direccion{
+    border-radius: 0;
+    border-color: white grey grey white;
+    
+}
+
+
+    .tamaño{
+        width: 169%;
+    }
+
+
+.fondoNombre{
+    vertical-align: top;
+}
+
+.fondoDireccion{
+    vertical-align: top;
+    width: 100%;
+
+}
+
+.fondoDireccion {
+    position: relative; /* referencia para el mensaje */
+}
+
+.fondoDireccion:hover .mensaje{
+    display: block;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+
+.campo label {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.campo select {
+  height: 38px;
+  padding: 6px 10px;
+  font-size: 15px;
+
+  border: 2px solid #cfcfcf;
+  border-radius: 3px;
+  background-color: white;
+
+
+}
+
+.juntos {
+  width: 50%;
+    display: inline-block; 
+  vertical-align: top; /* importante */
+   margin-right: -30px; 
+}
+
+
+/* Esto es para poner juntos los cuadrados de el formulario  */
+
+.formujuntos {
+    display: flex;
+    gap: 50px;              /* separación entre los bloques */
+    align-items: flex-start;
+}
+
+select{
+    width: 31%;
+}
+
+
+/* Email */
+
+.fondoemail{
+    width: 100%;
+}
+.fondoemail:hover{
+    background-color:  #fbff78;
+   
+}
+
+
+/* Telefono */
+
+.fondotlf{
+    width: 100%;
+}
+
+.fondotlf:hover{
+    background-color:  #fbff78;
+   
+}
+
+.separacion{
+    margin-left: -17%;
+}
+
+
+
+#alta{
+margin-left: 45em;
+}
+
+.juntos2 {
+  width: 50%;
+    display: inline-block; 
+  vertical-align: top; /* importante */
+   margin-right: -52px; 
+}
+
+.mas{
+    margin-left: -40%;
+}
+
+
+
+.bloqueCampos {
+    margin-left: 150px;   /* AJUSTA ESTE VALOR */
+}

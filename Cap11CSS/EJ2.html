@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej1cap8</title>
+    <link rel="stylesheet" href="ej2.css">
+</head>
+
+<body>
+    <form action="new_cv.php" method="post" enctype="multipart/form-data">
+    
+        <h1><strong>Formulario de alta</strong></h1>
+<hr>
+<div class="fondoNombre">
+    
+    <label for="nombre">
+        <strong>Nombre y Apellidos<span class=asterisco>*</span></strong>
+    </label>
+   
+
+    <div class="bloqueCampos">
+        <input type="text" size="10"  required/>
+        <p class="nombreape">Nombre</p>
+
+        <input type="text" size="20" required/>
+        <p class="nombreape">Primer apellido</p>
+
+        <input type="text" size="20" required/>
+        <p class="nombreape">Segundo apellido</p>
+    </div>
+
+</div>
+
+        </div>
+
+<hr>
+        <div class="fondoDireccion">
+        
+                <div class="abajo">
+                <label for="direccion"><strong>Dirección<span class=asterisco>*</span></strong>
+                </label>
+                <p class="mensaje">El codigo postal es imprescindible para poder recibir los pedidos</p>
+                </div>
+
+                <div>
+                    <div class="bloqueCampos">
+                        <input type=" text" id="direccion"  size="30" required/>
+                        <p class="nombreape">Calle, numero, piso, puerta</p>
+                </div>
+
+                
+                        
+                        </div>
+                        <div class="juntos">
+                            <div class="bloqueCampos">
+                        <input type="text" id="direccion"  size="11" required/>
+                        <p class="nombreape"> Codigo postal</p>
+                        </div>
+                        </div>
+                     
+
+                        <div class="juntos">
+                       
+                        <input type="text" id="direccion"  size="11" required/>
+                        <p class="nombreape"> Municipio </p>
+                     
+                        </div>
+
+                        <div class="juntos">
+                            <div class="bloqueCampos">
+                                <div class="tamaño">
+                        <select name="provincia" id="direccion" class="provincia" required>
+                            <option value="sevilla">Sevilla</option>
+                            <option value="cadiz">Cádiz</option>
+                            <option value="jerez">Jerez</option>
+                        </select>
+                                </div>
+                        <p class="nombreape">Provincia</p>
+                        </div>
+                        </div>
+                        
+                        <div class="juntos">
+                        <select name="provincia" id="direccion" class="provincia" required>
+                            <option value="España">España</option>
+                            <option value="Groenlandia">Groenlandia</option>
+                            <option value="EE.UU">EE.UU</option>
+                            <option value="Japón">Japon</option>
+                        </select>
+                        <p class="nombreape"> País </p>
+                        </div>
+                
+                
+                       
+        </div>
+
+
+
+
+
+<hr>
+
+
+
+
+
+<!-- EMAIL -->
+
+        <div class="fondoemail">
+                <label for="nombre"><strong>Email</strong></label>
+                <div class="bloqueCampos">
+                <input type=" text" id="nombre" size="20" />
+                  <p class="nombreape">Email</p>
+        </div>    
+        </div>      
+<hr>
+
+                
+<!-- TELEFONO -->
+        <div class="fondotlf" >
+        <label for="nombre"><strong>Telefono<span class=asterisco>*</span></strong></label>
+               
+        
+        <div class="bloqueCampos">
+               
+                <div class="juntos2">
+                        <input type=" text" id="nombre" size="10" required/>
+                        <p class="nombreape">Fijo</p>
+                </div>
+
+
+                <div class="juntos2">
+                     <span class="separacion">  <input type="text" id="nombre"  size="11" required />
+                       <p class="nombreape" ><span class="mas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Movil</span></p>
+                    
+                </div>
+</div>
+        </div>
+
+<hr>
+
+  <input type="submit" id="alta" name="Darme de alta➡" value="Darme de alta➡" />
+
+    </form>
+</body>
+
+</html>
