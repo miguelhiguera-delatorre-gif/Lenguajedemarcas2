@@ -13,9 +13,6 @@ width: 500px;
 height: 165px;
 order: 0;
 border: 1px solid rgb(143, 12, 160);
-   
-
-
 
 }
 
@@ -40,6 +37,7 @@ border: 1px solid rgb(143, 12, 160);
     height: 50px;
     margin: 0.5em;
 }
+
 
 p{
 margin: 0.5em;
