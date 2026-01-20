@@ -1,0 +1,19 @@
+.caja {
+  width: 1009px;
+  height: 304px;
+  display:flex;
+  flex-wrap: wrap;
+  border: 1px solid rgb(81, 0, 91);
+  padding: 0;
+  margin: 0;
+
+}
+
+.cajasmoradas{
+border: 1px solid rgb(81, 0, 91);
+background-color: rgb(208, 158, 255);
+width: 200px;
+height: 100px;
+  padding: 0;
+  margin: 0;
+}

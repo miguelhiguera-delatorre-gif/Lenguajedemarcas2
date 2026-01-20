@@ -1,0 +1,18 @@
+.hueco {
+  width: 500px;
+  height: 500px;
+  display:flex;
+  flex-direction: row;
+  border: 1px solid rgb(81, 0, 91);
+
+}
+
+
+.numero1{
+      
+    background-color: rgb(195, 141, 245);
+     border: 1px solid rgb(81, 0, 91);
+    padding:0.5em;
+    
+}
+
