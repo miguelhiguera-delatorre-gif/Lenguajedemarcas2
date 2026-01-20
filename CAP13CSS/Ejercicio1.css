@@ -1,0 +1,22 @@
+.grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr);  4 columnas iguales  */
+  gap: 10px; /* espacio entre celdas */
+  width: 400px; /* ancho total del grid */
+}
+
+.item {
+  background-color: lightcoral;
+  aspect-ratio: 1 / 1; /* clave para que cada item sea cuadrado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+
+
+.item1{
+    background-color: pink;
+;
+}
