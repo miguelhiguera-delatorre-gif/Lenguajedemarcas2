@@ -109,7 +109,7 @@ color: red;
 .juntos {
   width: 50%;
     display: inline-block; 
-  vertical-align: top; /* importante */
+  vertical-align: top; 
    margin-right: -11px; 
 }
 
