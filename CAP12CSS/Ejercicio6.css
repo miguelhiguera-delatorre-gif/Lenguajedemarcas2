@@ -1,0 +1,45 @@
+.caja{
+    display: flex;
+    width: 990px;
+    height: 110px;
+    border: 1px solid rgb(0, 0, 0);
+    flex-direction: column;
+    text-align: center;
+}
+
+.header{
+    height: 25px;
+    width: 990px;
+    background-color: red;
+}
+
+.medio{
+
+    display: flex;
+    
+}
+
+.aside1{
+    height: 60px;
+width: 25%;    background-color: yellow;
+}
+
+.main{
+    height: 60px;
+    width: 50%;
+    background-color: aqua;
+
+}
+
+.aside2{
+    height: 60px;
+    width: 25%;
+    background-color: rgb(255, 149, 166);
+}
+
+.footer{
+    height: 25px;
+     width: 990px;
+    background-color: rgb(83, 255, 83);
+}
+
