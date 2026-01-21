@@ -1,0 +1,45 @@
+.contenido {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 3px solid rgb(81, 0, 91);
+  
+  width: 800px;
+  height: 700px;
+  text-align: center;
+  
+}
+
+
+.header {
+  grid-column: 1 / 13;
+  grid-row: 1 / 2;
+  background-color: rgb(222, 94, 202);
+    height: 200px;
+
+}
+
+.menu {
+  grid-column: 1 / 5;
+  grid-row: 2 / 3;
+  background-color: blueviolet;
+     height: 300px;
+
+}
+
+.content {
+  grid-column: 5 / 13;
+  grid-row: 2 / 3;
+  background-color: rgb(255, 112, 112);
+    height: 300px;
+
+
+}
+
+.footer {
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
+   background-color: rgb(43, 214, 226);
+ height: 200px;
+  
+}

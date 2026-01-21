@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  gap: 3px;
+  max-width: 600px;
+  height: 450px;
+  text-align: center;
+  grid-template-areas:"uno uno dos dos"
+                      "tres cuatro dos dos"
+                      "tres cinco seis seis";
+}
+
+
+.item1{
+    grid-area: uno;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+
+.item2{
+    grid-area: dos;
+    background-color: blueviolet;
+     border: 1px solid black;
+}
+
+
+.item3{
+    grid-area: tres;
+    background-color: blueviolet;
+     border: 1px solid black;
+}
+
+
+.item4{
+    grid-area: cuatro;
+    background-color: blueviolet;
+     border: 1px solid black;
+}
+
+
+.item5{
+    grid-area: cinco;
+    background-color: blueviolet;
+     border: 1px solid black;
+}
+
+
+.item6{
+    grid-area: seis;
+    background-color: blueviolet;
+     border: 1px solid black;
+}
