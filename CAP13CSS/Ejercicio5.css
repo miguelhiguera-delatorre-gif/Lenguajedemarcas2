@@ -40,17 +40,17 @@
 .blog{
   grid-area: blog;
   background-color: rgb(230, 92, 0);
-  height: 90%;
+  
 }
 
 .blo{
     background-color: rgb(165, 68, 4);
-    height: 60%;
+    
     
 }
 .android{
   grid-area: android;
-  background-color: greenyellow;
+  background-color: rgb(116, 173, 29);
 }
 
 
