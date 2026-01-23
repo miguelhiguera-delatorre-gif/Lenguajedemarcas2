@@ -1,46 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
 .contenido {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(20, 1fr);
-  gap: 15px;
-
+  gap: 5px;
   width: 1000px;
   height: 800px;
   margin: auto;
+  background-color: rgb(205, 184, 255);
+
+  grid-template-areas:"circulos   circulos    gmail       mapas "
+                      "circulos   circulos    gmail       mapas"
+                      "circulos   circulos    gmail       mapas"
+                      "circulos   circulos    gmail       mapas"
+                      "circulos   circulos    gmail       mapas"
+                      "circulos   circulos    gmail       mapas"
+                      "circulos   circulos    news        mapas"
+                      "blog       chrome      news        mapas"
+                      "blog       chrome      news        search"
+                      "blog       chrome      news        search"
+                      "blog    chrome      earth       search"
+                      "android    chrome      earth       search"
+                      "android    chrome   earth       youtube"
+                      "android    cascos      earth       youtube"
+                      "android    cascos      earth       youtube"
+                      "android cascos   earth   youtube";
 }
 
-.mi-imagen {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.circulos{
+  grid-area: circulos;
+  background-color: white;
 }
 
-/* CÍRCULOS → 2 columnas / 6 filas */
-.circulos {
-  grid-column: 1 / 3;
-  grid-row: 1 / 7;
+
+.blog{
+  grid-area: blog;
+  background-color: rgb(230, 92, 0);
+  height: 90%;
 }
 
-/* BLOG → 1 columna / 3 filas */
-.blog {
-  grid-column: 1 / 2;
-  grid-row: 7 / 10;
+.blo{
+    background-color: rgb(165, 68, 4);
+    height: 60%;
+    
+}
+.android{
+  grid-area: android;
+  background-color: greenyellow;
 }
 
-/* ANDROID → 1 columna / 5 filas */
-.android {
-  grid-column: 1 / 2;
-  grid-row: 10 / 15;
+
+.chrome{
+  grid-area: chrome;
+  background-color: rgb(184, 46, 46);
 }
 
-/* CHROME → 2 columnas / 4 filas */
-.chrome {
-  grid-column: 2 / 4;
-  grid-row: 7 / 11;
+.cascos{
+  grid-area: cascos;
+  background-color: yellow;
 }
 
-/* GMAIL → 3 columnas / 3 filas */
-.gmail {
-  grid-column: 2 / 5;
-  grid-row: 1 / 4;
+
+
+.gmail{
+  grid-area: gmail;
+  background-color: aquamarine;
 }
+
+
+
+.news{
+  grid-area: news;
+  background-color: rgb(144, 189, 107);
+}
+
+
+.earth{
+  grid-area:earth;
+  background-color: blue;
+}
+
+
+
+.maps{
+grid-area: mapas;
+background-color: chocolate;
+}
+
+
+.buscar{
+  grid-area: search;
+  background-color: rgb(126, 126, 255);
+}
+
+
+
+
+
+.youtube{
+  grid-area: youtube;
+  background-color: rgb(100, 27, 27);
+}
+
+
