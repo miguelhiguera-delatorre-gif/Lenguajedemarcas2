@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;           
+    height: 500px;        
+    background-color: rgb(243, 245, 255);
+    position: relative;
+    overflow: hidden;      
+}
+
+/* Imagen fija a la izquierda dentro del contenedor */
+.contenedor img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;          
+    height: 400px;        
+    object-fit: contain;   
+}
+
+.logo {
+    width: 600px;
+    height: 500px; 
+    margin-left: 150px;
+    right: 200px;
+}
+
+.Medio {
+    display: flex;
+    flex-direction: column;       /* organiza en columna para que los textos queden uno arriba del otro */
+    justify-content: center; 
+    align-items: center;          /* centra horizontalmente */
+    font-size: 200px;
+    margin-top: 80px;
+    background-color: rgb(254, 254, 254);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;           /* centra el texto dentro de cada línea */
+    
+    position: relative;  /* para poder mover con top */
+    top: -180px;         /* mueve todo el bloque hacia arriba */
+}
+
+.azul {
+    color: rgb(118, 118, 230);
+}
+
+.abajo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: gray;
+    text-align: center;
+    
+}
+
+
+.contenedor2 {
+    display: flex;
+    width: 100%;           
+    height: 500px;        
+    background-color: rgb(243, 245, 255);
+    position: relative;
+    overflow: hidden;      
+}
