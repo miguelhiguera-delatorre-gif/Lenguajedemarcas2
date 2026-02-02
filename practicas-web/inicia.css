@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* FONDO GENERAL */
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e5e5e5;
+}
+
+/* CENTRADO TOTAL */
+.contenedor {
+    margin-top: 5px;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+/* CUADRO ROJO */
+.caja {
+    background-color: rgb(149, 0, 0);
+    padding: 50px 60px;
+    border-radius: 30px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.3);
+}
+
+/* TITULOS */
+.caja h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.caja p {
+    color: #f2f2f2;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* FORMULARIO */
+.formu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formu input {
+    padding: 14px 18px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+
+/* BOTÓN */
+.formu button {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+ 
+    background-color: white;
+    color: rgb(149, 0, 0);
+    
+}
+
+.formu button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
