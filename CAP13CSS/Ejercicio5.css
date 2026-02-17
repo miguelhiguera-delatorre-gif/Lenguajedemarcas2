@@ -96,7 +96,6 @@
 }
 
 
-/* CASO ESPECIAL CIRCULOS */
 
 .circulos{
   grid-area: circulos;
@@ -127,7 +126,7 @@
 }
 
 
-/* ÁREAS Y COLORES */
+
 .gmail{
   grid-area: gmail;
   background-color: aquamarine;

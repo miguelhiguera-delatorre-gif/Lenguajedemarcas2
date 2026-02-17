@@ -43,6 +43,7 @@ body {
 
 .menu a:hover {
     text-decoration: underline;
+    color: red;
 }
 
 /* TITULO */
@@ -74,7 +75,7 @@ body {
     align-items: center;
 }
 
-.producto:hover {
+.producto:hover {   
     transform: translateY(-15px);
     transform: scale(1.09);
 }
@@ -85,6 +86,7 @@ body {
     padding: 30px;
     text-align: center;
     box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
     
 }
 
