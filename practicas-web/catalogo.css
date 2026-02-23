@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-/* BLOQUEO SCROLL */
 html, body {
     height: 100%;
-    overflow: hidden;
     font-family: 'Poppins', sans-serif;
     background-color: rgb(255, 209, 209);
 }
 
-/* LAYOUT GENERAL */
 body {
     display: flex;
     flex-direction: column;
@@ -39,7 +36,6 @@ body {
     color: black;
     font-weight: 500;
 }
-
 
 .menu a:hover {
     text-decoration: underline;
@@ -75,11 +71,6 @@ body {
     align-items: center;
 }
 
-.producto:hover {   
-    transform: translateY(-15px);
-    transform: scale(1.09);
-}
-/* TARJETAS */
 .producto {
     background-color: white;
     border-radius: 30px;
@@ -87,10 +78,11 @@ body {
     text-align: center;
     box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
-    
 }
 
-
+.producto:hover {
+    transform: scale(1.09);
+}
 
 .producto img {
     width: 160px;
@@ -124,3 +116,131 @@ body {
     font-size: 16px;
 }
 
+
+/* =============================
+   TABLET — max-width: 1024px
+============================= */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 40px;
+    }
+
+    .menu a {
+        font-size: 20px;
+        margin-left: 25px;
+    }
+
+    .titulo h1 {
+        font-size: 44px;
+    }
+
+    .titulo p {
+        font-size: 18px;
+    }
+
+    /* 2 columnas en tablet */
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px 40px;
+    }
+
+    .producto img {
+        width: 120px;
+    }
+
+    .producto h2 {
+        font-size: 22px;
+    }
+
+    .producto p {
+        font-size: 14px;
+    }
+
+    .precio {
+        font-size: 18px;
+    }
+}
+
+
+/* =============================
+   MÓVIL — max-width: 600px
+============================= */
+@media (max-width: 600px) {
+    html, body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .menu a {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .titulo {
+        height: auto;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .titulo p {
+        font-size: 14px;
+    }
+
+    /* 1 columna en móvil */
+    .catalogo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .producto {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+
+    .producto img {
+        width: 100px;
+    }
+
+    .producto h2 {
+        font-size: 20px;
+    }
+
+    .producto p {
+        font-size: 13px;
+    }
+
+    .precio {
+        font-size: 16px;
+    }
+
+    .footer {
+        height: auto;
+        padding: 15px;
+        font-size: 13px;
+        text-align: center;
+    }
+}

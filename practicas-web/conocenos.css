@@ -6,13 +6,10 @@
 
 html, body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(255, 209, 209);
     font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 209, 209);
 }
 
-
-/* LAYOUT */
 body {
     display: flex;
     flex-direction: column;
@@ -105,4 +102,132 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 16px;
+}
+
+
+/* =============================
+   TABLET — max-width: 1024px
+============================= */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 40px;
+    }
+
+    .menu a {
+        font-size: 20px;
+        margin-left: 25px;
+    }
+
+    .titulo h1 {
+        font-size: 44px;
+    }
+
+    .titulo p {
+        font-size: 18px;
+    }
+
+    /* En tablet el mapa y texto se apilan */
+    .info {
+        flex-direction: column;
+        padding: 30px 40px;
+        gap: 30px;
+    }
+
+    .info-texto {
+        width: 100%;
+    }
+
+    .info-texto h2 {
+        font-size: 26px;
+    }
+
+    .info-texto p {
+        font-size: 16px;
+    }
+
+    /* Mapa ocupa todo el ancho */
+    .mapa iframe {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+
+/* =============================
+   MÓVIL — max-width: 600px
+============================= */
+@media (max-width: 600px) {
+    html, body {
+        height: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .menu a {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .titulo {
+        height: auto;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .titulo p {
+        font-size: 14px;
+    }
+
+    .info {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .info-texto {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .info-texto h2 {
+        font-size: 22px;
+    }
+
+    .info-texto p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .mapa iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .footer {
+        height: auto;
+        padding: 15px;
+        font-size: 13px;
+        text-align: center;
+    }
 }

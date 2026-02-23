@@ -4,14 +4,12 @@
     box-sizing: border-box;
 }
 
-/* FUENTE Y FONDO */
 html, body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(255, 209, 209);
 }
 
-/* LAYOUT GENERAL */
 body {
     display: flex;
     flex-direction: column;
@@ -88,15 +86,13 @@ body {
     transform: scale(1.08);
 }
 
-/* 🔥 LOGOS TODOS IGUALES */
 .sponsor img {
-    height: 110px;          /* MISMO TAMAÑO PARA TODOS */
+    height: 110px;
     width: 100%;
-    object-fit: contain;    /* NO SE DEFORMAN */
+    object-fit: contain;
     margin-bottom: 25px;
 }
 
-/* TEXTO */
 .sponsor h2 {
     font-size: 26px;
     color: rgb(149, 0, 0);
@@ -110,4 +106,103 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 16px;
+}
+
+
+/* =============================
+   MEDIAQUERY — TABLET (iPad)
+   max-width: 1024px
+============================= */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 40px;
+        height: 10vh;
+    }
+
+    .menu a {
+        margin-left: 25px;
+        font-size: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 45px;
+    }
+
+    .titulo p {
+        font-size: 18px;
+    }
+
+    /* 2 columnas en tablet */
+    .sponsors {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 40px;
+    }
+
+    .sponsor h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* =============================
+   MEDIAQUERY — MÓVIL
+   max-width: 600px
+============================= */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .menu a {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .titulo {
+        height: auto;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .titulo p {
+        font-size: 15px;
+    }
+
+    /* 1 columna en móvil */
+    .sponsors {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 20px;
+    }
+
+    .sponsor {
+        padding: 30px 15px;
+    }
+
+    .sponsor img {
+        height: 80px;
+    }
+
+    .sponsor h2 {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 13px;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
 }

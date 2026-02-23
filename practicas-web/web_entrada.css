@@ -22,17 +22,14 @@ html, body {
     padding: 0 80px;
 }
 
-/* LOGO */
 .logo {
     height: 80%;
     margin-left: 150px;
 }
 
-/* MENU */
 .menu {
     display: flex;
     align-items: center;
-    
 }
 
 .menu a {
@@ -50,7 +47,6 @@ html, body {
 
 /* ================= CONTENT ================= */
 .content {
-    
     width: 100%;
     height: 70%;
     background-color: rgb(255, 209, 209);
@@ -60,7 +56,6 @@ html, body {
     justify-content: center;
 }
 
-/* TEXTOS */
 .texto1 {
     margin-top: 160px;
     font-size: 150px;
@@ -78,12 +73,11 @@ html, body {
     margin-top: 10px;
 }
 
-/* IMAGEN CENTRAL */
 .empieza {
     margin-top: 40px;
 }
 
-.empieza:hover{
+.empieza:hover {
     transform: scale(1.35);
 }
 
@@ -103,19 +97,140 @@ html, body {
     gap: 40px;
 }
 
-/* ICONOS REDES */
 .footer img {
     width: 80px;
     height: 80px;
-     transition: transform 0.3s ease;
-   
+    transition: transform 0.3s ease;
 }
 
-.footer img:hover{
+.footer img:hover {
     transform: scale(1.50);
 }
 
+.emp {
+    color: red;
+}
 
-.emp{
-    color: red ;
+
+/* =============================
+   MEDIAQUERY — TABLET (iPad)
+   max-width: 1024px
+============================= */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 40px;
+        height: auto;
+        min-height: 80px;
+    }
+
+    .logo {
+        height: 60px;
+        margin-left: 40px;
+    }
+
+    .menu a {
+        font-size: 28px;
+        margin-left: 25px;
+    }
+
+    .content {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .texto1 {
+        font-size: 70px;
+        margin-top: 60px;
+    }
+
+    .texto2 {
+        font-size: 75px;
+    }
+
+    .texto3 {
+        font-size: 28px;
+    }
+
+    .empieza img {
+        width: 500px;
+        height: 340px;
+    }
+
+    .footer {
+        height: auto;
+        min-height: 80px;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .footer img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+/* =============================
+   MEDIAQUERY — MÓVIL
+   max-width: 600px
+============================= */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 45px;
+        margin-left: 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .content {
+        height: auto;
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .texto1 {
+        font-size: 38px;
+        margin-top: 30px;
+    }
+
+    .texto2 {
+        font-size: 40px;
+    }
+
+    .texto3 {
+        font-size: 16px;
+    }
+
+    .empieza img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        height: auto;
+        padding: 15px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .footer img {
+        width: 45px;
+        height: 45px;
+    }
 }

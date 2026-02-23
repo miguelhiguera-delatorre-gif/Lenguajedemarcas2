@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-
-/* FONDO GENERAL */
 html, body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     background-color: #e5e5e5;
 }
 
-/* CENTRADO TOTAL */
 .contenedor {
     margin-top: 5px;
     height: 90%;
@@ -21,12 +18,12 @@ html, body {
     align-items: center;
 }
 
-.logo{
+.logo {
     width: 100px;
     display: flex;
     justify-content: flex-start;
 }
-/* CUADRO ROJO */
+
 .caja {
     background-color: rgb(149, 0, 0);
     padding: 50px 60px;
@@ -37,8 +34,6 @@ html, body {
     margin-bottom: 100px;
 }
 
-
-/* TITULOS */
 .caja h1 {
     color: white;
     font-size: 36px;
@@ -50,10 +45,8 @@ html, body {
     color: #f2f2f2;
     font-size: 16px;
     margin-bottom: 35px;
-
 }
 
-/* FORMULARIO */
 .formu {
     display: flex;
     flex-direction: column;
@@ -68,9 +61,6 @@ html, body {
     outline: none;
 }
 
-
-
-/* BOTÓN */
 .formu button {
     margin-top: 10px;
     padding: 15px;
@@ -78,13 +68,83 @@ html, body {
     border: none;
     font-size: 18px;
     font-weight: 700;
- 
     background-color: white;
     color: rgb(149, 0, 0);
-    
 }
 
 .formu button:hover {
     background-color: #f1f1f1;
     transform: scale(1.05);
+}
+
+
+/* =============================
+   TABLET — max-width: 1024px
+============================= */
+@media (max-width: 1024px) {
+    .caja {
+        width: 360px;
+        padding: 45px 50px;
+    }
+
+    .caja h1 {
+        font-size: 30px;
+    }
+
+    .caja p {
+        font-size: 15px;
+    }
+
+    .formu button {
+        font-size: 16px;
+    }
+}
+
+
+/* =============================
+   MÓVIL — max-width: 600px
+============================= */
+@media (max-width: 600px) {
+    html, body {
+        height: auto;
+        min-height: 100%;
+    }
+
+    .contenedor {
+        height: auto;
+        min-height: 100vh;
+        padding: 30px 15px;
+        align-items: center;
+    }
+
+    .caja {
+        width: 100%;
+        max-width: 340px;
+        padding: 35px 25px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+    .caja h1 {
+        font-size: 26px;
+    }
+
+    .caja p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .formu input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .formu button {
+        font-size: 15px;
+        padding: 13px;
+    }
+
+    .logo {
+        width: 75px;
+    }
 }
