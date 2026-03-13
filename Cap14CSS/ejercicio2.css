@@ -1,0 +1,19 @@
+table tr:first-child {
+  background: rgb(245, 24, 171);
+}
+
+
+table tr:nth-child(3) {
+  background-color: aqua;
+}
+
+
+table tr:last-child {
+  background: rgb(3, 156, 207);
+}
+
+table{
+    border-collapse: collapse;
+    width: 10%;
+    text-align: center;
+}

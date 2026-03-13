@@ -1,0 +1,32 @@
+table{
+    border-collapse: collapse;
+    text-align: center;
+    width: 30%;
+}
+
+thead {
+  background-color: rgb(119, 119, 119);
+  
+}
+
+tbody {
+  background-color: rgb(98, 255, 247);
+}
+
+tfoot {
+  background-color: rgb(26, 26, 26);
+  color: white;
+}   
+
+
+/* ----LA OTRA FORMA DE HACERLO------ */
+
+/* 
+table tr:first-child {
+  background: rgb(0, 0, 0);
+}
+
+
+table tr:last-child {
+  background: rgb(3, 156, 207);
+} */
