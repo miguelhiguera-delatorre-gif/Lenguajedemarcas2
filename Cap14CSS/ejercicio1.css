@@ -1,0 +1,9 @@
+div::first-line{
+color: red;
+ font-size: 2em;
+}
+
+div::first-letter{
+    color: rgb(92, 221, 92);
+    font-size: 3em;
+}
