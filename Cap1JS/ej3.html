@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+<ul id="lista">
+    <li>Elemento 1</li>
+</ul>
+
+<button id="boton">Añadir elemento</button>
+
+<script>
+let contador = 2;
+
+document.getElementById("boton").addEventListener("click", function() {
+    let nuevoElemento = document.createElement("li");
+    let texto = document.createTextNode("Elemento " + contador);
+
+    nuevoElemento.appendChild(texto);
+    document.getElementById("lista").appendChild(nuevoElemento);
+
+    contador++;
+});
+</script>
+
+</body>
+</html>

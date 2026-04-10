@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+<p>
+    Este es un texto incompleto...
+
+    <span id="resto" style="display:none;">
+        Aquí está el resto del contenido completo del texto.
+    </span>
+</p>
+
+<a href="#" id="enlace">Ver más</a>
+
+<script>
+document.getElementById("enlace").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    document.getElementById("resto").style.display = "inline";
+    this.style.display = "none";
+});
+</script>
+
+</body>
+</html>

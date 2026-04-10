@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+ <a href=""></a>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, <a href="">consequat congue</a>, o nec, commodo ultricies, 
+turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. <a href="">Pellentesque</a> massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl
+elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Fusce porta. Duis pellentesque, felis eu adipiscing ullamcorper, odio 
+urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer <a href="http://prueba">adipiscing elit</a>. Duis scelerisque. Donec lacus neque, vehicula in, eleifend 
+vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis 
+erat eu odio. Praesent id  <a href="">metus</a>.
+</p>
+<p>
+Aenean at nisl. Maecenas egestas dapibus odio.  <a href="http://prueba">Vestibulum</a> ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin consequat auctor diam. Ut bibendum 
+blandit est. Curabitur vestibulum. Nunc malesuada porttitor sapien. Aenean a lacus et metus venenatis porta. Suspendisse cursus, sem non dapibus tincidunt, lorem magna porttitor
+felis, id sodales dolor dolor sed urna. Sed rutrum nulla vitae tellus.  <a href="">Sed quis eros</a> nec lectus tempor lacinia. Aliquam nec lectus nec neque aliquet dictum. Etiam consequat sem
+quis massa. Donec aliquam euismod diam. In magna massa, mattis id, pellentesque sit amet, porta sit amet, lectus. Curabitur posuere. Aliquam in elit. Fusce condimentum, arcu
+in scelerisque lobortis, ante arcu scelerisque mi, at  <a href="">cursus</a> mi risus sed tellus.
+</p>
+<p>
+Donec sagittis, nibh nec ullamcorper tristique, pede velit feugiat massa, at  <a href="http://prueba">sollicitudin</a> justo tellus vitae justo. Vestibulum aliquet, nulla sit amet imperdiet suscipit, 
+nunc erat laoreet est, a aliquam leo odio sed sem. Quisque eget eros  <a href="">vehicula</a> diam euismod tristique. Ut dui. Donec in metus sed risus laoreet sollicitudin. Proin et nisi 
+non arcu sodales hendrerit. In sem. Cras id augue eu lorem dictum interdum. Donec pretium. Proin egestas adipiscing ligula. Duis iaculis laoreet turpis. Mauris mollis est 
+sit amet diam. Curabitur hendrerit, eros quis  <a href="https://es.wikipedia.org/wiki/Nahum">malesuada</a> tristique, ipsum odio euismod tortor, a vestibulum nisl mi at odio. Sed non lectus non est <a href="">pellentesque auctor</a>.
+</p>
+
+
+
+<script>
+
+
+
+// 1. Número de enlaces de la página
+
+const enlaces = document.getElementsByTagName("a");
+console.log("Número de enlaces:", enlaces.length);
+
+// 2. Dirección a la que enlaza el penúltimo enlace
+
+if (enlaces.length >= 2) {
+    const penultimo = enlaces[enlaces.length - 2];
+    console.log("Penúltimo enlace:", penultimo.href);
+}
+// 3. Numero de enlaces que enlazan a http://prueba
+let contador = 0;
+for (let i = 0; i < enlaces.length; i++) {
+    if (enlaces[i].href === "http://prueba/") {
+        contador++;
+    }
+}
+
+console.log("Numero de enlaces que enlazan a prueba:" ,contador);
+
+// 4. Número de enlaces del tercer párrafo
+const parrafos = document.getElementsByTagName("p");
+
+if (parrafos.length >= 3) {
+    const enlacesTercerParrafo = parrafos[2].getElementsByTagName("a");
+    console.log("Enlaces en el tercer párrafo:", enlacesTercerParrafo.length);
+}
+
+</script>
+
+
+
+</body>
+</html>
