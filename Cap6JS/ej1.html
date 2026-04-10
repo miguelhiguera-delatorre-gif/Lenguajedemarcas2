@@ -11,7 +11,7 @@
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
 </span>
 <br><br>
-<a href="#" id="enlace">Ocultar contenidos</a>
+<a href="#" id="enlace1">Ocultar contenidos</a>
     </p>
 
 
@@ -31,8 +31,13 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae 
 
 
 <script>
-        document.getElementById("mensaje1").style.visibility = "hidden";
 
+        document.getElementById("enlace1").addEventListener("click", function(e) {
+        e.preventDefault();
+
+        document.getElementById("mensaje1").display = "none";
+        
+        });
 
 </script>
 </body>
