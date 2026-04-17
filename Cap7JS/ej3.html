@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3-cap7</title>
+</head>
+<body>
+
+    TEXTO:<br>
+        <input type="text" id="mensaje"  onkeypress="soloNumeros()"/>
+        <p id="mensaje2"></p>
+
+
+<script>
+        
+        function soloNumeros() {    
+            var mensajeR = document.getElementById("mensaje");
+   
+            let quees=event.key;
+            alert(event.key);
+    if (event.key < "0" || event.key > "9") {
+        mensajeR.textContent = "deben ser numeros";
+        mensajeR.style.color = "red";
+        
+    }
+
+}
+
+        // let mensajeR = document.getElementById("mensaje");
+
+            // if (mensajeR.value.length <=3){
+            //       mensaje2.textContent = "muy corta";
+            //       mensaje2.style.color = "red";
+                  
+            // }else if ( mensajeR.value.length>3){
+            //       mensaje2.textContent = "Longitud valida";
+            //       mensaje2.style.color = "green";
+            // }
+        //LAS DOS FORMAS QUE HAY DE HACERLO SON:
+        //mensaje.textContent ="Este campo es obligatorio";
+        //document.getElementById("mensaje").innerHTML = "CAMPO OBLIGATORIO";
+</script>
+
+        
+
+
+
+</body>
+</html>

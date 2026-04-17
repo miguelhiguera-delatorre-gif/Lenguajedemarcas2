@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2-cap7</title>
+</head>
+<body>
+
+    TEXTO:
+        <input type="password" id="mensaje"  onblur="valida()"/>
+        <p id="mensaje2"></p>
+
+
+<script>
+        
+        function valida() {    
+            
+            let mensajeR = document.getElementById("mensaje");
+
+            if (mensajeR.value.length <=3){
+                  mensaje2.textContent = "muy corta";
+                  mensaje2.style.color = "red";
+                  
+            }else if ( mensajeR.value.length>3){
+                  mensaje2.textContent = "Longitud valida";
+                  mensaje2.style.color = "green";
+            }
+                  
+                
+           
+        }
+
+        //LAS DOS FORMAS QUE HAY DE HACERLO SON:
+        //mensaje.textContent ="Este campo es obligatorio";
+        //document.getElementById("mensaje").innerHTML = "CAMPO OBLIGATORIO";
+</script>
+
+        
+
+
+
+</body>
+</html>
