@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Botón</title>
+
+  <style>
+    #boton {
+      width: 150px;
+      height: 100px;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+      margin: 50px;
+    }
+  </style>
+
+  <script>
+    window.onload = function () {
+      var boton = document.getElementById("boton");
+
+      boton.onclick = function () {
+        boton.style.width = "300px";
+        boton.style.height = "200px";
+        boton.innerHTML = "Has pulsado en el botón";
+        boton.style.lineHeight = "200px";
+      };
+    };
+  </script>
+</head>
+
+<body>
+
+  <div id="boton">
+    Pulsar
+  </div>
+
+</body>
+</html>

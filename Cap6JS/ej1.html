@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio1-cap6-js</title>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Eventos</title>
+
+  <script>
+    window.onload = function () {
+
+      function ocultarMostrar(enlaceId, contenidoId) {
+        var enlace = document.getElementById(enlaceId);
+        var contenido = document.getElementById(contenidoId);
+
+        enlace.onclick = function () {
+          if (contenido.style.display == "none") {
+            contenido.style.display = "block";
+            enlace.innerHTML = "Ocultar contenidos";
+          } else {
+            contenido.style.display = "none";
+            enlace.innerHTML = "Mostrar contenidos";
+          }
+          return false;
+        };
+      }
+
+      ocultarMostrar("enlace1", "contenido1");
+      ocultarMostrar("enlace2", "contenido2");
+      ocultarMostrar("enlace3", "contenido3");
+
+    };
+  </script>
 </head>
+
 <body>
-    <p>
-        <span id="mensaje1">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
-</span>
-<br><br>
-<a href="#" id="enlace1">Ocultar contenidos</a>
-    </p>
 
+  <p id="contenido1">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero.
+  </p>
+  <a href="#" id="enlace1">Ocultar contenidos</a>
 
-  <p>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
-<br><br>
-<a href="#" id="enlace">Ocultar contenidos</a>
-</p>
+  <p id="contenido2">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero.
+  </p>
+  <a href="#" id="enlace2">Ocultar contenidos</a>
 
+  <p id="contenido3">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero.
+  </p>
+  <a href="#" id="enlace3">Ocultar contenidos</a>
 
-  <p>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
-<br><br>
-<a href="#" id="enlace">Ocultar contenidos</a>
-</p>
-
-
-
-<script>
-
-        document.getElementById("enlace1").addEventListener("click", function(e) {
-        e.preventDefault();
-
-        document.getElementById("mensaje1").display = "none";
-        
-        });
-
-</script>
 </body>
 </html>
