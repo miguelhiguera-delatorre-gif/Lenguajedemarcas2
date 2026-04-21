@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA y Salud Mental</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="high-resolution-color-logo.png" type="image/x-icon">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Manrope',sans-serif;background:#f4f6f9;color:#1e293b;line-height:1.7;font-size:18px;scroll-behavior:smooth}
+
+header{position:fixed;width:100%;top:0;background:rgba(15,23,42,0.85);backdrop-filter:blur(12px);z-index:1000}
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 50px}
+nav h1{color:#fff;font-weight:700;font-size:1.3rem}
+nav a{color:#e2e8f0;margin-left:20px;text-decoration:none;font-weight:500;transition:0.3s}
+nav a:hover{color:#38bdf8}
+
+.hero{
+  height:100vh;
+  background:url('high-resolution-color-logo.png') center/cover no-repeat;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:white;position:relative;
+}
+.hero::after{
+  content:"";position:absolute;width:100%;height:100%;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.4));
+}
+.hero-content{position:relative;z-index:1;animation:fadeIn 1.5s ease}
+.hero h2{font-size:3.2rem;margin-bottom:10px}
+.hero p{font-size:1.4rem;color:#cbd5f5}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.container{max-width:1100px;margin:auto;padding:70px 20px}
+.section-title{text-align:center;margin-bottom:25px;font-size:2.3rem}
+
+.section{margin-bottom:40px;opacity:0;transform:translateY(30px);transition:all 0.8s ease}
+.section.visible{opacity:1;transform:translateY(0)}
+
+.section p{max-width:850px;margin:10px auto;color:#475569;text-align:center;font-size:1.05rem}
+
+.image-banner{
+  width:100%;height:350px;border-radius:15px;margin-top:20px;
+  background-size:cover;background-position:center;
+  transition:transform 0.6s ease;
+}
+.image-banner:hover{transform:scale(1.02)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:25px}
+.card{background:white;padding:25px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.07);text-align:center;transition:0.4s}
+.card:hover{transform:translateY(-8px);box-shadow:0 15px 30px rgba(0,0,0,0.12)}
+.card h3{margin-bottom:8px;font-size:1.2rem}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;margin-top:25px}
+.grid-2 img{width:100%;border-radius:15px;transition:0.5s}
+.grid-2 img:hover{transform:scale(1.05)}
+
+footer{background:#0f172a;color:white;text-align:center;padding:30px;margin-top:40px;font-size:0.95rem}
+
+@media(max-width:900px){
+.grid-2{grid-template-columns:1fr}
+.hero h2{font-size:2.3rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<h1>IA & Salud Mental</h1>
+<div>
+<a href="#intro">Introducción</a>
+<a href="#funciona">Funcionamiento</a>
+<a href="#aplicaciones">Aplicaciones</a>
+<a href="#beneficios">Beneficios</a>
+<a href="#riesgos">Riesgos</a>
+<a href="#futuro">Futuro</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h2>IA para la salud mental</h2>
+<p>Tecnología capaz de entender emociones humanas</p>
+</div>
+</section>
+
+<section id="intro" class="container section">
+<h2 class="section-title">Introducción</h2>
+<p>La inteligencia artificial aplicada a la salud mental permite analizar emociones humanas mediante datos como voz, texto o imagen. Esta tecnología está cambiando la forma en que se detectan y tratan problemas emocionales.</p>
+<div class="image-banner" style="background-image:url('https://picsum.photos/1200/600?brain')"></div>
+</section>
+
+<section id="funciona" class="container section">
+<h2 class="section-title">¿Cómo funciona?</h2>
+<div class="grid-2">
+<img src="https://picsum.photos/600/400?face" />
+<div>
+<p>Los sistemas de IA utilizan redes neuronales y aprendizaje automático para analizar patrones en expresiones faciales, tono de voz o lenguaje escrito.</p>
+<p>Estos datos se procesan para identificar emociones como estrés, felicidad o ansiedad con gran precisión.</p>
+</div>
+</div>
+</section>
+
+<section id="aplicaciones" class="container section">
+<h2 class="section-title">Aplicaciones</h2>
+<div class="cards">
+<div class="card">
+<h3>Chatbots</h3>
+<p>Asistencia emocional disponible 24/7.</p>
+</div>
+<div class="card">
+<h3>Apps</h3>
+<p>Seguimiento del estado mental diario.</p>
+</div>
+<div class="card">
+<h3>Terapia digital</h3>
+<p>Apoyo complementario a psicólogos.</p>
+</div>
+</div>
+</section>
+
+<section id="beneficios" class="container section">
+<h2 class="section-title">Beneficios</h2>
+<div class="grid-2">
+<div>
+<p>Permite detección temprana de problemas, acceso rápido a ayuda y personalización de tratamientos.</p>
+<p>También mejora la prevención y reduce barreras de acceso a la salud mental.</p>
+</div>
+<img src="https://picsum.photos/600/400?wellness" />
+</div>
+</section>
+
+<section id="riesgos" class="container section">
+<h2 class="section-title">Riesgos</h2>
+<p>La privacidad de datos, errores en interpretación emocional y dependencia tecnológica son algunos desafíos importantes.</p>
+<div class="image-banner" style="background-image:url('https://picsum.photos/1200/600?security')"></div>
+</section>
+
+<section id="futuro" class="container section">
+<h2 class="section-title">Futuro</h2>
+<p>La IA seguirá evolucionando hacia sistemas más precisos, integrándose en hospitales y plataformas digitales para mejorar el bienestar emocional.</p>
+<div class="image-banner" style="background-image:url('https://picsum.photos/1200/600?future')"></div>
+</section>
+
+<footer>
+<p>Proyecto DAW | IA y Salud Mental - 2026</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      sec.classList.add('visible');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
