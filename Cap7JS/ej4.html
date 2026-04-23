@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4</title>
+</head>
+<body>
+
+  Ejercicio 4: Confirmación de contraseña
+  <br>
+
+  <input type="password" id="pass1" placeholder="Contraseña">
+
+  <br><br>
+
+  <input type="password" id="pass2" placeholder="Repetir contraseña">
+
+  <p id="mensaje"></p>
+
+  <script>
+
+    let pass1 = document.getElementById("pass1");
+    let pass2 = document.getElementById("pass2");
+    let mensaje = document.getElementById("mensaje");
+
+    function comprobar() {
+
+      if (pass1.value === "" || pass2.value === "") {
+        mensaje.textContent = "";
+        return;
+      }
+
+      if (pass1.value === pass2.value) {
+
+        mensaje.textContent = "Coinciden";
+        mensaje.style.color = "green";
+
+      } else {
+
+        mensaje.textContent = "No coinciden";
+        mensaje.style.color = "red";
+
+      }
+
+    }
+
+    pass1.onkeyup = comprobar;
+    pass2.onkeyup = comprobar;
+
+  </script>
+
+</body>
+</html>

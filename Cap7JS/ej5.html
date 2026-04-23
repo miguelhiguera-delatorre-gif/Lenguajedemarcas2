@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5</title>
+</head>
+<body>
+
+  Ejercicio 5: Deshabilitar botón hasta validar
+  <br><br>
+
+  <input type="text" id="nombre" placeholder="Nombre">
+
+  <br><br>
+
+  <input type="email" id="email" placeholder="Email">
+
+  <br><br>
+
+  <button id="btnEnviar" disabled>Enviar</button>
+
+  <script>
+
+    let nombre = document.getElementById("nombre");
+    let email = document.getElementById("email");
+    let boton = document.getElementById("btnEnviar");
+
+    function validar() {
+
+      let nombreValido = nombre.value.trim() !== "";//trim elimino espacios en blanco 
+      let emailValido = email.value.includes("@");
+
+      boton.disabled = !(nombreValido && emailValido);
+
+    }
+
+    nombre.onkeyup = validar;
+    email.onkeyup = validar;
+
+  </script>
+
+</body>
+</html>
