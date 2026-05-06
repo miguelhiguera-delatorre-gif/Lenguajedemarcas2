@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8</title>
+
+  <style>
+
+    .barra {
+      width: 300px;
+      height: 30px;
+      background: lightgray;
+    }
+
+    .progreso {
+      height: 100%;
+      width: 0%;
+      background: green;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>Ejercicio 8: Barra de progreso</h1>
+
+  <textarea id="texto"></textarea>
+
+  <div class="barra">
+    <div class="progreso" id="progreso"></div>
+  </div>
+
+  <p>
+    Caracteres restantes:
+    <span id="contador">100</span>
+  </p>
+
+  <script>
+
+    let texto = document.getElementById("texto");
+    let contador = document.getElementById("contador");
+    let progreso = document.getElementById("progreso");
+
+    let maximo = 100;
+
+    texto.onkeydown = function(event) {
+
+      let especiales = [
+        "Backspace",
+        "Delete",
+        "ArrowLeft",
+        "ArrowRight"
+      ];
+
+      if (
+        texto.value.length >= maximo &&
+        !especiales.includes(event.key)
+      ) {
+        event.preventDefault();
+      }
+
+    };
+
+    texto.onkeyup = function() {
+
+      let usados = texto.value.length;
+      let restantes = maximo - usados;
+
+      contador.textContent = restantes;
+
+      let porcentaje = (usados / maximo) * 100;
+
+      progreso.style.width = porcentaje + "%";
+
+      if (usados >= maximo) {
+
+        progreso.style.background = "red";
+
+      } else {
+
+        progreso.style.background = "green";
+
+      }
+
+    };
+
+  </script>
+
+</body>
+</html>

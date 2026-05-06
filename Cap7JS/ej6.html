@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 6</title>
+</head>
+<body>
+
+  Ejercicio 6: Límite de caracteres
+  <br>
+  <textarea id="texto"></textarea>
+
+  <p>
+    Caracteres restantes:
+    <span id="contador">100</span>
+  </p>
+
+  <script>
+
+    let texto = document.getElementById("texto");
+    let contador = document.getElementById("contador");
+
+    let maximo = 100;
+
+    texto.onkeydown = function(event) {
+
+      let especiales = [
+        "Backspace",
+        "Delete",
+        "ArrowLeft",
+        "ArrowRight"
+      ];
+
+      if (
+        texto.value.length >= maximo &&
+        !especiales.includes(event.key)
+      ) {
+        event.preventDefault();
+      }
+
+    };
+
+    texto.onkeyup = function() {
+
+      let restantes = maximo - texto.value.length;
+
+      contador.textContent = restantes;
+
+    };
+
+  </script>
+
+</body>
+</html>
