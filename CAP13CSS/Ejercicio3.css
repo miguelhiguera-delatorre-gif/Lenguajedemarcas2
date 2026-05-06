@@ -1,6 +1,6 @@
 .contenido {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   border: 3px solid rgb(81, 0, 91);
   
