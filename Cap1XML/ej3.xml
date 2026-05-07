@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cursos>
+
+    <curso identificador="DAW01">
+        <nombre>Desarrollo Web</nombre>
+        <duracion>2 años</duracion>
+        <descripcion>Curso de desarrollo de aplicaciones web</descripcion>
+
+        <becas />
+
+        <aula informatica="si">
+            <planta>1</planta>
+            <numero>12</numero>
+        </aula>
+
+        <precio>
+            <antiguos>1000</antiguos>
+            <nuevos>1500</nuevos>
+        </precio>
+
+        <semanas>
+
+            <semana horario="mañana">
+                <inicio>
+                    <dia>10</dia>
+                    <mes>9</mes>
+                    <anio>2026</anio>
+                </inicio>
+                <fin>
+                    <dia>20</dia>
+                    <mes>9</mes>
+                    <anio>2026</anio>
+                </fin>
+            </semana>
+
+            <semana horario="tarde">
+                <inicio>
+                    <dia>1</dia>
+                    <mes>10</mes>
+                    <anio>2026</anio>
+                </inicio>
+                <fin>
+                    <dia>10</dia>
+                    <mes>10</mes>
+                    <anio>2026</anio>
+                </fin>
+            </semana>
+
+            <semana horario="mañana">
+                <inicio>
+                    <dia>5</dia>
+                    <mes>11</mes>
+                    <anio>2026</anio>
+                </inicio>
+                <fin>
+                    <dia>15</dia>
+                    <mes>11</mes>
+                    <anio>2026</anio>
+                </fin>
+            </semana>
+
+        </semanas>
+
+        <profesores>
+
+            <profesor tipo="teoria">
+                <nombre>Luis</nombre>
+                <apellidos>Gómez Ruiz</apellidos>
+            </profesor>
+
+            <profesor tipo="practicas">
+                <nombre>Laura</nombre>
+                <apellidos>Martín Pérez</apellidos>
+            </profesor>
+
+        </profesores>
+
+        <temas>
+
+            <tema numero="1">
+                <titulo>HTML</titulo>
+                <resumen>Introducción a HTML</resumen>
+                <palabrasClave>web, etiquetas</palabrasClave>
+
+                <ejercicios>
+
+                    <practicos>
+                        <numero>5</numero>
+                        <duracion>2h</duracion>
+                    </practicos>
+
+                    <teoricos>
+                        <numero>10</numero>
+                        <duracion>1h</duracion>
+                    </teoricos>
+
+                </ejercicios>
+            </tema>
+
+            <tema numero="2">
+                <titulo>CSS</titulo>
+                <resumen>Estilos web</resumen>
+                <palabrasClave>diseño, colores</palabrasClave>
+
+                <ejercicios>
+
+                    <practicos>
+                        <numero>6</numero>
+                        <duracion>3h</duracion>
+                    </practicos>
+
+                    <teoricos>
+                        <numero>8</numero>
+                        <duracion>1h</duracion>
+                    </teoricos>
+
+                </ejercicios>
+            </tema>
+
+        </temas>
+
+    </curso>
+
+</cursos>
