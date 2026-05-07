@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Esto es lo que hace que funcione el calendario, si no se ve mal  -->
+
+    <style>
+
+        /* CUADRO AMARILLO */
+        #cajaFecha{
+
+            background-color: yellow;
+            padding: 10px;
+            width: 240px;
+            border: 1px solid black;
+            margin-bottom: 5px;
+
+        }
+
+
+      
+        /* Decoramos lo de dentro de el cuadro amarillo */
+        #fecha{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        } 
+
+    </style>
+
+</head>
+<body>
+
+
+   
+    <!-- CAJA AMARILLA -->
+    <div id="cajaFecha">
+        <a href="#" id="fecha"></a>
+    </div>
+
+    <!-- CALENDARIO -->
+    <input type="text" id="calendario">
+
+
+    <!-- LIBRERÍAS JAVASCRIPT -->
+    <!-- Librería Flatpickr NECESARIO PARA MOSTRAR CUANDO PINCHAS EL CALENDARIO -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Traducción al español -->
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+
+
+
+
+
+    <script>
+        // FUNCIÓN PARA MOSTRAR LA FECHA
+        
+        // Esta función recibe una fecha
+        // y la muestra dentro del recuadro amarillo
+
+        function mostrarFecha(fecha){
+            // Formato largo:
+            // lunes, 14 de septiembre de 2026
+
+            let opciones = {
+
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+
+            };
+            // Convertir fecha al formato español
+            let fechaTexto =
+                fecha.toLocaleDateString('es-ES', opciones);
+
+            // Mostrar el texto dentro del enlace
+            document.getElementById("fecha").textContent =
+                fechaTexto;
+
+        }
+
+        // MOSTRAR FECHA ACTUAL AL CARGAR
+        
+        // Crear la fecha actual
+        let hoy = new Date();
+
+        // Mostrarla en pantalla
+        mostrarFecha(hoy);
+
+        // CREAMOS EL CALENDARIO
+        
+
+        flatpickr("#calendario", {
+
+            // Idioma español
+            locale: "es",
+
+            // Seleccionar el día de hoy
+            defaultDate: "today",
+
+            // No mostrar números de semana
+            weekNumbers: false,
+
+            // CUANDO EL USUARIO CAMBIA LA FECHA
+         
+            onChange: function(fechasSeleccionadas){
+
+                // fechasSeleccionadas[0]
+                // es la fecha elegida por el usuario
+
+                mostrarFecha(fechasSeleccionadas[0]);
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
