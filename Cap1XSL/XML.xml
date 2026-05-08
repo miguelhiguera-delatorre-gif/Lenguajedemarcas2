@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ej1.xsl"?>
+
+
+<ies>
+    <nombre>IES Ruiz Gijón</nombre>
+    <web>https://ciclos.iesruizgijon.es/</web>
+
+        <ciclos>
+
+            <ciclo id="SMR">
+                <nombre>Sistemas Microinformáticos y Redes</nombre>
+                <grado>Medio</grado>
+                <ordenTitulo año="2009"/>
+            </ciclo>
+
+            <ciclo id="DAW">
+                <nombre>Desarrollo de Aplicaciones Web</nombre>
+                <grado>Superior</grado>
+                <ordenTitulo año="2011"/>
+            </ciclo>
+
+        </ciclos>
+</ies>

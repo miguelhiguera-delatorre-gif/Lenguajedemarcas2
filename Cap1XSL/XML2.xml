@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ej2.xsl"?>
+<ies>
+    <modulos>
+        <modulo id="0228">
+            <nombre>Aplicaciones web</nombre>
+            <curso>2</curso>
+            <horasSemanales>4</horasSemanales>
+            <ciclo>SMR</ciclo>
+        </modulo>
+
+        <modulo id="0484">
+            <nombre>Bases de datos</nombre>
+            <curso>1</curso>
+            <horasSemanales>6</horasSemanales>
+            <ciclo>DAM</ciclo>
+        </modulo>
+
+        <modulo id="0373">
+            <nombre>Sistemas de marcas y sistemas de gestión de información</nombre>
+            <curso>1</curso>
+            <horasSemanales>4</horasSemanales>
+            <ciclo>ASIR</ciclo>
+            <ciclo>DAM</ciclo>
+        </modulo>
+
+        <modulo id="1376">
+            <nombre>Implantación de aplicaciones web</nombre>
+            <curso>2</curso>
+            <horasSemanales>5</horasSemanales>
+            <ciclo>ASIR</ciclo>
+        </modulo>
+    </modulos>
+</ies>

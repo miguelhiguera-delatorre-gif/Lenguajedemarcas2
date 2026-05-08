@@ -1,0 +1,37 @@
+body{
+    font-family: Comic Sans MS;
+    background-color: pink;
+    cursor:wait;
+}
+
+h2{
+    text-align: center;
+    color: hotpink;
+    text-shadow: 1px 1px yellow;
+}
+
+table{
+    width: 80%;
+    margin-left: 10%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 6px dashed hotpink;
+}
+
+
+td{
+    border: 1px solid black;
+    padding: 6px;
+}
+
+
+tr:nth-child(1){background-color: #ffcccc;}
+tr:nth-child(2){background-color: #ffd9b3;}
+tr:nth-child(3){background-color: #fff0b3;}
+tr:nth-child(4){background-color: #d9ffb3;}
+tr:nth-child(5){background-color: #b3e6ff;}
+tr:nth-child(6){background-color: #d9b3ff;}
+
+
+
+
