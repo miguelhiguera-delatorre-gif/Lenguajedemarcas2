@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cartelera>
+
+    <pelicula estreno="2024">
+        <titulo>Avatar 3</titulo>
+        <nacionalidad>EEUU</nacionalidad>
+
+        <duracion>
+            <horas>2</horas>
+            <minutos>45</minutos>
+        </duracion>
+
+        <director>James Cameron</director>
+
+        <actores>
+
+            <actor tipo="principal">
+                <nombre>Sam</nombre>
+                <apellidos>Worthington</apellidos>
+            </actor>
+
+            <actor tipo="reparto">
+                <nombre>Zoe</nombre>
+                <apellidos>Saldana</apellidos>
+            </actor>
+
+        </actores>
+
+        <descripcion>Película de ciencia ficción</descripcion>
+    </pelicula>
+
+</cartelera>

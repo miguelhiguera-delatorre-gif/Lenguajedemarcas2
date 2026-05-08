@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+
+    <alumno dni="12345678A">
+        <nombre>Juan</nombre>
+        <apellidos>Pérez López</apellidos>
+        <sexo>Hombre</sexo>
+
+        <fechaNacimiento>
+            <dia>10</dia>
+            <mes>5</mes>
+            <anio>2005</anio>
+        </fechaNacimiento>
+
+        <direccion>Calle A</direccion>
+
+        <telefono tipo="movil">600111222</telefono>
+
+        <notaMedia>7.5</notaMedia>
+    </alumno>
+
+
+    <alumno dni="23456789B">
+        <nombre>María</nombre>
+        <apellidos>García Ruiz</apellidos>
+        <sexo>Mujer</sexo>
+
+        <fechaNacimiento>
+            <dia>15</dia>
+            <mes>3</mes>
+            <anio>2004</anio>
+        </fechaNacimiento>
+
+        <direccion>Calle B</direccion>
+
+        <telefono tipo="fijo">955111222</telefono>
+
+        <notaMedia>8.2</notaMedia>
+    </alumno>
+
+
+    <alumno dni="34567890C">
+        <nombre>Pedro</nombre>
+        <apellidos>Martín Soto</apellidos>
+        <sexo>Hombre</sexo>
+
+        <fechaNacimiento>
+            <dia>22</dia>
+            <mes>11</mes>
+            <anio>2003</anio>
+        </fechaNacimiento>
+
+        <direccion>Calle C</direccion>
+
+        <telefono tipo="movil">611222333</telefono>
+
+        <notaMedia>6.9</notaMedia>
+    </alumno>
+
+
+    <alumno dni="45678901D">
+        <nombre>Ana</nombre>
+        <apellidos>López Díaz</apellidos>
+        <sexo>Mujer</sexo>
+
+        <fechaNacimiento>
+            <dia>5</dia>
+            <mes>7</mes>
+            <anio>2005</anio>
+        </fechaNacimiento>
+
+        <direccion>Calle D</direccion>
+
+        <telefono tipo="movil">622333444</telefono>
+
+        <notaMedia>9.1</notaMedia>
+    </alumno>
+
+
+    <alumno dni="56789012E">
+        <nombre>David</nombre>
+        <apellidos>Fernández Ruiz</apellidos>
+        <sexo>Hombre</sexo>
+
+        <fechaNacimiento>
+            <dia>30</dia>
+            <mes>1</mes>
+            <anio>2004</anio>
+        </fechaNacimiento>
+
+        <direccion>Calle E</direccion>
+
+        <telefono tipo="fijo">955333444</telefono>
+
+        <notaMedia>7.8</notaMedia>
+    </alumno>
+
+</alumnos>
