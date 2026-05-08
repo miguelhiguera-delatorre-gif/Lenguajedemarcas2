@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calendario con Flatpickr</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+<body>
+
+<h2>Selecciona un rango de fechas</h2>
+
+<!-- Poner fecha arriba -->
+<div class="cajaFecha">
+    <a href="#" id="fechaSeleccionada"></a>
+</div>
+<!-- calendario -->
+<input type="text" id="fecha" placeholder="Selecciona un rango de fechas">
+
+<!-- JS principal -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- idioma español -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+<style>
+    .cajaFecha {
+      background-color: #fff3a3;
+      border: 1px solid black;
+      width: fit-content;
+    }
+</style>
+<script>
+
+flatpickr("#fecha", {   
+  dateFormat: "d/m/Y",
+  minDate: "today",
+  locale: "es",
+  mode: "multiple"
+});
+
+
+
+
+
+
+
+
+  
+</script>
+
+
+
+</body>
+</html>

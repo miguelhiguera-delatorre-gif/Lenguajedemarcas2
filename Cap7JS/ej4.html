@@ -18,31 +18,32 @@
   <p id="mensaje"></p>
 
   <script>
-
+    //  let nombre=new Array();
+    //  nombre.length
     let pass1 = document.getElementById("pass1");
     let pass2 = document.getElementById("pass2");
     let mensaje = document.getElementById("mensaje");
 
-    function comprobar() {
+        function comprobar() {
 
-      if (pass1.value === "" || pass2.value === "") {
-        mensaje.textContent = "";
-        return;
-      }
+          if (pass1.value == "" || pass2.value == "") {
+            mensaje.textContent = "";
+            return;
+          }
 
-      if (pass1.value === pass2.value) {
+          if (pass1.value == pass2.value) {
 
-        mensaje.textContent = "Coinciden";
-        mensaje.style.color = "green";
+            mensaje.textContent = "Coinciden";
+            mensaje.style.color = "green";
 
-      } else {
+          } else {
 
-        mensaje.textContent = "No coinciden";
-        mensaje.style.color = "red";
+            mensaje.textContent = "No coinciden";
+            mensaje.style.color = "red";
 
-      }
+          }
 
-    }
+        }
 
     pass1.onkeyup = comprobar;
     pass2.onkeyup = comprobar;
