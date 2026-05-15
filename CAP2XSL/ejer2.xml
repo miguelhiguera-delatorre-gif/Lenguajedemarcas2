@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ejer2.xsl"?>
+
+<instituto nombre="instituto Monte Alto">
+<ciclos>
+<especialidad nombre="Informática">
+<ciclo id="ASIR" grado="Superior">Administración de Sistemas Informáticos y Redes</ciclo>
+<ciclo id="SMR" grado="Medio">Sistemas Microinformáticos y Redes</ciclo>
+</especialidad>
+<especialidad nombre="Administración">
+<ciclo id="GA" grado="Medio">Gestión Administrativa</ciclo>
+<ciclo id="AF" grado="Superior">Administración y Finanzas</ciclo>
+</especialidad>
+</ciclos>
+
+
+
+
+<notas>
+<clase nombre="SMR">
+<alumno aprobado="SI">
+<nombre>Federico Garcia</nombre>
+<nota>8</nota>
+<email>fede@hotmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="NO">
+<nombre>Albert Bru</nombre>
+<email>ab@potas.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Manolito Pérez</nombre>
+<nota>8</nota>
+<email>manolito@hotmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Filomeno Pi</nombre>
+<nota>8</nota>
+<email>filo@gmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="NO">
+<nombre>Santiago Rabassa</nombre>
+<email>santi@destroyer.cat</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Marcelino Pupilla</nombre>
+<nota>8</nota>
+<email>marcel32@hotmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+</clase>
+<clase nombre="ASIR">
+<alumno aprobado="NO">
+<nombre>Jaime Capmany</nombre>
+<email>jcp@gmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Mohamed Polih</nombre>
+<nota>5</nota>
+<email>moha@correus.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Juan Pérez</nombre>
+<nota>6</nota>
+<email>jupe@xmailx.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Filibert Puig</nombre>
+<nota>5</nota>
+<email>filib@mymail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Bernat Alegria</nombre>
+<nota>9</nota>
+<email>bern@hotmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="NO">
+<nombre>Samuel Barnadas</nombre>
+<email>samu-samu@barnadas.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Felip Martí</nombre>
+<nota>5</nota>
+<email>fmarti@gmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="NO">
+<nombre>Juanjo Roig</nombre>
+<email>fede@hotmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Magdalena Serra</nombre>
+<nota>10</nota>
+<email>magda10@kissmail.com</email>
+<genero>Mujer</genero>
+</alumno>
+</clase>
+<clase nombre="GA">
+<alumno aprobado="SI">
+<nombre>Maria Pinta</nombre>
+<nota>6</nota>
+<email>maripi@hotmail.com</email>
+<genero>Mujer</genero>
+</alumno>
+<alumno aprobado="NO">
+<nombre>Judith González</nombre>
+<email>judigonza@mymail.net</email>
+<genero>Mujer</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Sandra Taylor</nombre>
+<nota>7</nota>
+<email>sandrat@mail.com</email>
+<genero>Mujer</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Andreu Verd</nombre>
+<nota>5</nota>
+<email>verd-clar@tymail.net</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Jaqueline Zumo</nombre>
+<nota>6</nota>
+<email>zumo@sol.es</email>
+<genero>Mujer</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Natasha Koma</nombre>
+<nota>9</nota>
+<email>yoda@pissmail.ru</email>
+<genero>Mujer</genero>
+</alumno>
+</clase>
+<clase nombre="AF">
+<alumno aprobado="SI">
+<nombre>Eli Prisa</nombre>
+<nota>6</nota>
+<email>elipri@gmail.com</email>
+<genero>Mujer</genero>
+</alumno>
+<alumno aprobado="NO">
+<nombre>Gori Puig</nombre>
+<email>goripu@hotmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Adela Puig</nombre>
+<nota>3</nota>
+<email>ade14@yahoo.com</email>
+<genero>Mujer</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Toni Cirerer</nombre>
+<nota>5</nota>
+<email>cirerer-florit@correu.cat</email>
+<genero>Hombre</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Maria de la Llum Brom</nombre>
+<nota>10</nota>
+<email>marillu@llummail.cat</email>
+<genero>Mujer</genero>
+</alumno>
+<alumno aprobado="SI">
+<nombre>Teodore Poussin</nombre>
+<nota>5</nota>
+<email>tpss@hotmail.com</email>
+<genero>Hombre</genero>
+</alumno>
+</clase>
+</notas>
+</instituto>
