@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoBarber | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: #312E38;
+            color: #F4EDE8;
+        }
+        .bg-custom-dark { background-color: #28262E; }
+        .bg-custom-input { background-color: #232129; }
+        .text-custom-orange { color: #FF9000; }
+        .bg-custom-orange { background-color: #FF9000; }
+        .border-custom-orange { border-color: #FF9000; }
+        
+        .transition-all { transition: all 0.3s ease; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #232129; }
+        ::-webkit-scrollbar-thumb { background: #3E3B47; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FF9000; }
+
+        .skeleton {
+            background: linear-gradient(90deg, #3E3B47 25%, #4e4b59 50%, #3E3B47 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .calendar-day.selected {
+            background-color: #FF9000;
+            color: #232129;
+            font-weight: bold;
+        }
+        .calendar-day.has-appointments::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: #FF9000;
+            border-radius: 50%;
+            margin: 2px auto 0;
+        }
+        .calendar-day.selected.has-appointments::after {
+            background: #232129;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Vista de Login -->
+        <div id="login-view" class="min-h-screen flex items-center justify-center p-4">
+            <div class="max-w-md w-full text-center space-y-8">
+                <div class="flex flex-col items-center">
+                    <i data-lucide="scissors" class="w-16 h-16 text-custom-orange mb-4"></i>
+                    <h1 class="text-3xl font-medium">GoBarber</h1>
+                </div>
+                <form id="login-form" class="space-y-4">
+                    <h2 class="text-xl mb-6">Faça seu logon</h2>
+                    <div class="relative">
+                        <i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+                        <input type="email" placeholder="E-mail" required class="w-full bg-custom-input p-4 pl-12 rounded-lg border-2 border-transparent focus:border-custom-orange outline-none transition-all">
+                    </div>
+                    <div class="relative">
+                        <i data-lucide="lock" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+                        <input type="password" placeholder="Senha" required class="w-full bg-custom-input p-4 pl-12 rounded-lg border-2 border-transparent focus:border-custom-orange outline-none transition-all">
+                    </div>
+                    <button type="submit" class="w-full bg-custom-orange text-[#312E38] font-bold py-4 rounded-lg hover:bg-[#cc7300] transition-all">
+                        Entrar
+                    </button>
+                    <a href="#" class="block text-sm hover:text-gray-400 mt-4">Esqueci minha senha</a>
+                </form>
+                <div class="pt-8">
+                    <button class="text-custom-orange flex items-center justify-center w-full gap-2 hover:opacity-80">
+                        <i data-lucide="log-in" class="w-5 h-5"></i>
+                        Criar conta
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard View (Hidden by default) -->
+        <div id="dashboard-view" class="hidden min-h-screen">
+            <!-- Header -->
+            <header class="bg-custom-dark py-8 px-4 sm:px-12">
+                <div class="max-w-6xl mx-auto flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="scissors" class="w-10 h-10 text-custom-orange"></i>
+                        <div class="hidden sm:block">
+                            <p class="text-gray-400">Bienvenido,</p>
+                            <strong class="text-custom-orange" id="user-name">Alexandre</strong>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="text-right flex items-center gap-4">
+                            <img src="https://github.com/shadcn.png" alt="Avatar" class="w-14 h-14 rounded-full border-2 border-custom-orange">
+                            <button id="logout-btn" class="text-gray-500 hover:text-custom-orange transition-all">
+                                <i data-lucide="power" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="max-w-6xl mx-auto p-4 sm:p-12 grid grid-cols-1 lg:grid-cols-3 gap-16">
+                <!-- Schedule Section -->
+                <div class="lg:col-span-2 space-y-10">
+                    <div>
+                        <h1 class="text-4xl font-bold mb-2">Horários agendados</h1>
+                        <p class="text-custom-orange flex items-center gap-2">
+                            <span id="display-date">Hoy</span>
+                            <span class="w-px h-4 bg-custom-orange mx-2"></span>
+                            <span>Día <span id="display-day-num">--</span></span>
+                        </p>
+                    </div>
+
+                    <!-- Next Appointment -->
+                    <section>
+                        <h3 class="text-gray-400 text-xl mb-4">Atendimento a seguir</h3>
+                        <div id="next-appointment-card" class="bg-custom-dark p-6 rounded-xl flex items-center gap-6 relative overflow-hidden">
+                            <div class="absolute left-0 top-0 h-full w-1 bg-custom-orange"></div>
+                            <img src="https://i.pravatar.cc/150?u=1" class="w-20 h-20 rounded-full">
+                            <div class="flex-1">
+                                <strong class="text-2xl block mb-2" id="next-client-name">Cargando...</strong>
+                                <div class="flex items-center gap-2 text-gray-400">
+                                    <i data-lucide="clock" class="w-4 h-4 text-custom-orange"></i>
+                                    <span>08:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Appointment List -->
+                    <section class="space-y-6">
+                        <div class="space-y-4">
+                            <h3 class="text-gray-400 text-xl border-b border-gray-700 pb-4">Mañana</h3>
+                            <div id="morning-appointments" class="space-y-4">
+                                <!-- Skeletons -->
+                                <div class="flex items-center gap-4 opacity-50">
+                                    <span class="w-12 h-6 skeleton rounded"></span>
+                                    <div class="flex-1 h-20 skeleton rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h3 class="text-gray-400 text-xl border-b border-gray-700 pb-4">Tarde</h3>
+                            <div id="afternoon-appointments" class="space-y-4">
+                                <!-- Loaded via JS -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Calendar Section -->
+                <aside class="space-y-8">
+                    <div class="bg-custom-dark rounded-xl p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <button id="prev-month" class="hover:text-custom-orange"><i data-lucide="chevron-left"></i></button>
+                            <strong id="calendar-month-year">Mayo 2026</strong>
+                            <button id="next-month" class="hover:text-custom-orange"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                        
+                        <div class="grid grid-cols-7 text-center text-gray-500 text-xs mb-4">
+                            <div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
+                        </div>
+                        
+                        <div id="calendar-grid" class="grid grid-cols-7 gap-1 text-center">
+                            <!-- Days generated by JS -->
+                        </div>
+                    </div>
+                </aside>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // State Management
+        const state = {
+            user: JSON.parse(localStorage.getItem('gobarber_user')) || null,
+            selectedDate: new Date(),
+            appointments: [
+                { id: 1, time: '08:00', client: 'Diego Fernandes', avatar: 'https://i.pravatar.cc/150?u=a', date: new Date().toDateString() },
+                { id: 2, time: '09:00', client: 'Luccas Maia', avatar: 'https://i.pravatar.cc/150?u=b', date: new Date().toDateString() },
+                { id: 3, time: '14:00', client: 'Robson Marques', avatar: 'https://i.pravatar.cc/150?u=c', date: new Date().toDateString() },
+                { id: 4, time: '15:00', client: 'Claudio Orlandi', avatar: 'https://i.pravatar.cc/150?u=d', date: new Date().toDateString() },
+            ]
+        };
+
+        // DOM Elements
+        const loginView = document.getElementById('login-view');
+        const dashboardView = document.getElementById('dashboard-view');
+        const loginForm = document.getElementById('login-form');
+        const logoutBtn = document.getElementById('logout-btn');
+        const calendarGrid = document.getElementById('calendar-grid');
+        const monthYearLabel = document.getElementById('calendar-month-year');
+        const morningList = document.getElementById('morning-appointments');
+        const afternoonList = document.getElementById('afternoon-appointments');
+
+        // Initialization
+        function init() {
+            lucide.createIcons();
+            if (state.user) {
+                showDashboard();
+            }
+            renderCalendar();
+            renderAppointments();
+        }
+
+        // Navigation
+        function showDashboard() {
+            loginView.classList.add('hidden');
+            dashboardView.classList.remove('hidden');
+            document.getElementById('user-name').innerText = state.user.email.split('@')[0];
+            renderAppointments();
+        }
+
+        function showLogin() {
+            dashboardView.classList.add('hidden');
+            loginView.classList.remove('hidden');
+            localStorage.removeItem('gobarber_user');
+            state.user = null;
+        }
+
+        // Event Listeners
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            state.user = { email };
+            localStorage.setItem('gobarber_user', JSON.stringify(state.user));
+            showDashboard();
+        });
+
+        logoutBtn.addEventListener('click', showLogin);
+
+        // Calendar Logic
+        function renderCalendar() {
+            calendarGrid.innerHTML = '';
+            const year = state.selectedDate.getFullYear();
+            const month = state.selectedDate.getMonth();
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            monthYearLabel.innerText = new Intl.DateTimeFormat('pt-BR', { month: 'long', year: 'numeric' }).format(state.selectedDate);
+
+            // Padding
+            for (let i = 0; i < firstDay; i++) {
+                calendarGrid.innerHTML += `<div></div>`;
+            }
+
+            // Days
+            for (let day = 1; day <= daysInMonth; day++) {
+                const isSelected = day === state.selectedDate.getDate();
+                const hasApps = state.appointments.some(a => {
+                    const d = new Date(a.date);
+                    return d.getDate() === day && d.getMonth() === month && d.getFullYear() === year;
+                });
+
+                const dayBtn = document.createElement('button');
+                dayBtn.className = `p-2 rounded-lg hover:bg-[#3E3B47] transition-all calendar-day ${isSelected ? 'selected' : ''} ${hasApps ? 'has-appointments' : ''}`;
+                dayBtn.innerText = day;
+                dayBtn.onclick = () => {
+                    state.selectedDate.setDate(day);
+                    renderCalendar();
+                    renderAppointments();
+                };
+                calendarGrid.appendChild(dayBtn);
+            }
+        }
+
+        document.getElementById('prev-month').onclick = () => {
+            state.selectedDate.setMonth(state.selectedDate.getMonth() - 1);
+            renderCalendar();
+        };
+
+        document.getElementById('next-month').onclick = () => {
+            state.selectedDate.setMonth(state.selectedDate.getMonth() + 1);
+            renderCalendar();
+        };
+
+        // Appointments Logic
+        function renderAppointments() {
+            // Loading Animation (Simulation)
+            morningList.innerHTML = `<div class="skeleton h-20 w-full rounded-xl opacity-20"></div>`;
+            afternoonList.innerHTML = `<div class="skeleton h-20 w-full rounded-xl opacity-20"></div>`;
+
+            setTimeout(() => {
+                morningList.innerHTML = '';
+                afternoonList.innerHTML = '';
+                
+                const filtered = state.appointments.filter(a => a.date === state.selectedDate.toDateString());
+                
+                // Update header date
+                document.getElementById('display-day-num').innerText = state.selectedDate.getDate();
+                document.getElementById('display-date').innerText = new Intl.DateTimeFormat('es-ES', { weekday: 'long' }).format(state.selectedDate);
+
+                if (filtered.length === 0) {
+                    morningList.innerHTML = '<p class="text-gray-500 italic">No hay citas para este periodo.</p>';
+                    return;
+                }
+
+                // Next appointment card
+                const next = filtered[0];
+                document.getElementById('next-client-name').innerText = next.client;
+                document.getElementById('next-appointment-card').querySelector('img').src = next.avatar;
+
+                filtered.forEach(app => {
+                    const html = `
+                        <div class="flex items-center gap-4 group">
+                            <div class="flex items-center gap-2 text-gray-300 w-16">
+                                <i data-lucide="clock" class="w-4 h-4 text-custom-orange"></i>
+                                <span>${app.time}</span>
+                            </div>
+                            <div class="flex-1 flex items-center gap-4 bg-custom-dark p-4 rounded-xl border border-transparent group-hover:border-custom-orange transition-all">
+                                <img src="${app.avatar}" class="w-10 h-10 rounded-full">
+                                <strong class="text-lg">${app.client}</strong>
+                            </div>
+                        </div>
+                    `;
+                    const hour = parseInt(app.time.split(':')[0]);
+                    if (hour < 12) {
+                        morningList.innerHTML += html;
+                    } else {
+                        afternoonList.innerHTML += html;
+                    }
+                });
+                lucide.createIcons();
+            }, 600);
+        }
+
+        init();
+    </script>
+</body>
+</html>
