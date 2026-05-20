@@ -1,0 +1,70 @@
+Ejercicio 4. Diccionario de frecuencias de palabras
+Crea un programa que lea el fichero palabras.txt. Cada línea contiene una sola palabra en minúsculas y sin
+espacios. El programa debe contar cuántas veces aparece cada palabra.
+
+Ejemplo de fichero palabras.txt: 
+hola
+ana
+lagarto 
+hola
+llave
+
+a) Usa un HashMap<String, Integer> para almacenar la frecuencia de cada palabra.
+b) Cuando una palabra aparece por primera vez, su frecuencia será 1.
+c) Cuando una palabra ya existe, se incrementará su frecuencia.
+ 
+            BufferedReader br = new BufferedReader(new FileReader("palabras.txt"));
+
+            String linea;
+
+            // Leer el fichero línea por línea
+            while ((linea = br.readLine()) != null) {
+
+                // Si la palabra ya existe, aumentamos el contador
+                if (frecuencia.containsKey(linea)) {
+                    frecuencia.put(linea, frecuencia.get(linea) + 1);
+                } 
+                // Si no existe, la añadimos con valor 1
+                else {
+                    frecuencia.put(linea, 1);
+                }
+            }
+
+            
+
+            // Mostrar resultados
+            for (String palabra : frecuencia.keySet()) {
+                System.out.println(palabra + " -> " + frecuencia.get(palabra));
+            }
+
+      
+    
+
+d) Muestra por pantalla las palabras ordenadas alfabéticamente. Para ello, crea un ArrayList<String> con
+las claves y usa Collections.sort(lista).
+
+
+            ArrayList<String> palabras = new ArrayList<String>();
+
+
+            BufferedReader br = new BufferedReader(new FileReader("palabras.txt"));
+
+            String linea;
+
+            while ((linea = br.readLine()) != null) {
+                palabras.add(linea);
+            }
+
+            br.close();
+
+            // Ordenar alfabéticamente
+            Collections.sort(palabras);
+
+            // Mostrar
+            for (String palabra : palabras) {
+                System.out.println(palabra);
+            }
+
+
+
+e) Guarda el resultado en frecuencias.txt con el formato palabra: frecuencia.

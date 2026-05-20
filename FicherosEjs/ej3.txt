@@ -1,0 +1,76 @@
+Ejercicio 3. Lectura de temperaturas desde fichero
+
+
+Crea un programa que lea un fichero llamado temperaturas.txt.
+
+Cada línea contiene una temperatura decimal.
+
+Ejemplo:
+
+18.5
+20
+35
+15
+1) Leer el fichero línea a línea
+BufferedReader br = new BufferedReader(new FileReader("temperaturas.txt"));
+
+String linea;
+2) Guardar cada temperatura en un ArrayList<Double>
+ArrayList<Double> temps = new ArrayList<>();
+
+while ((linea = br.readLine()) != null) {
+
+    temps.add(Double.parseDouble(linea));
+
+}
+
+Se lee cada línea del fichero y se convierte a double usando Double.parseDouble().
+
+3) Comprobar si hay datos
+if (temps.isEmpty()) {
+
+    System.out.println("No hay temperaturas que procesar");
+
+    return;
+
+}
+4) Mostrar mínima, máxima y media
+double minimo = temps.get(0);
+
+double maximo = temps.get(0);
+
+double suma = 0;
+
+for (double t : temps) {
+
+    if (t < minimo) {
+
+        minimo = t;
+
+    }
+
+    if (t > maximo) {
+
+        maximo = t;
+
+    }
+
+    suma = suma + t;
+
+}
+
+double media = suma / temps.size();
+
+5) Crear el fichero resumen_temperaturas.txt
+BufferedWriter bw = new BufferedWriter(
+        new FileWriter("resumen_temperaturas.txt"));
+
+bw.write("minima: " + minimo);
+bw.newLine();
+
+bw.write("maxima: " + maximo);
+bw.newLine();
+
+bw.write("media: " + media);
+
+bw.close();
