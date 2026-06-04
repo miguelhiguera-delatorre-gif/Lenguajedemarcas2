@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="estilos.css">
+    <title>Repaso HTML Básico</title>
+</head>
+
+<body>
+
+    <!-- TÍTULOS -->
+    <h1>Repaso de HTML</h1>
+    <h2>Subtítulo</h2>
+    <h3>Título pequeño</h3>
+
+    <!-- PÁRRAFOS -->
+    <p>Esto es un párrafo normal.</p>
+
+    <!-- TEXTO -->
+    <p><b>Texto en negrita</b></p>
+    <p><i>Texto en cursiva</i></p>
+    <p><u>Texto subrayado</u></p>
+
+    <!-- SALTO DE LÍNEA -->
+    Primera línea <br>
+    Segunda línea
+
+    <hr>
+
+    <!-- ENLACES -->
+    <h2>Enlaces</h2>
+
+    <a href="https://www.google.com">Ir a Google</a>
+    <br><br>
+
+    <a href="https://www.youtube.com" target="_blank"> Abrir YouTube en otra pestaña </a>
+
+    <hr>
+
+    <!-- IMAGEN A LA IZQUIERDA -->
+    <h2>Imagen</h2>
+
+    <img src="" alt="Imagen de ejemplo" align="left">
+
+    <p>Texto al lado de la imagen.</p>
+
+    <br><br><br><br><br><br><br>
+
+    <hr>
+
+    <!-- LISTAS -->
+    <h2>Listas</h2>
+
+    <!-- Lista desordenada -->
+    <ul>
+        <li>Manzana</li>
+        <li>Pera</li>
+        <li>Naranja</li>
+    </ul>
+
+    <!-- Lista ordenada -->
+    <ol>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+    </ol>
+
+    <hr>
+
+    <!-- TABLA 2x2 -->
+    <h2>Tabla 2x2</h2>
+
+    <table border="1">
+
+        <tr>
+            <td>Fila1 Col1</td>
+            <td>Fila1 Col2</td>
+        </tr>
+
+        <tr>
+            <td>Fila2 Col1</td>
+            <td>Fila2 Col2</td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <!-- TABLA 3x3 -->
+    <h2>Tabla 3x3</h2>
+
+    <table border="1">
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <!-- FORMULARIO -->
+    <h2>Formulario</h2>
+
+    <form>
+<div class="caja">
+        <!-- Nombre obligatorio -->
+       Nombre:
+        <input type="text" required>
+        <br><br>
+
+        <!-- Correo -->
+        <label>Correo:</label>
+        <input type="email">
+        <br><br>
+
+        <!-- Edad -->
+        <label>Edad:</label><br>
+        <input type="number" min="1" max="120">
+        <br><br>
+</div>
+        <!-- Tarifa fija -->
+        <label>Tarifa:</label>
+        <input type="text" value="20 euros" readonly>
+        <br><br>
+
+        <!-- Contraseña -->
+        <label>Contraseña:</label>
+        <input type="password">
+        <br><br>
+
+        <!-- Fecha -->
+        <label>Fecha:</label>
+        <input type="date">
+        <br><br>
+
+        <!-- Color -->
+        <label>Color favorito:</label>
+        <input type="color">
+        <br><br>
+
+        <!-- Archivo -->
+        <label>Subir archivo:</label>
+        <input type="file">
+        <br><br>
+
+        <!-- Radio -->
+        <p>Sexo:</p>
+
+        <input type="radio" name="sexo"> Hombre
+        <input type="radio" name="sexo"> Mujer
+
+        <br><br>
+
+        <!-- Checkbox -->
+        <p>Aficiones:</p>
+
+        <input type="checkbox"> Deportes
+        <input type="checkbox"> Música
+        <input type="checkbox"> Videojuegos
+
+        <br><br>
+
+        <!-- Select -->
+        <label>Ciudad:</label>
+
+        <select>
+            <option>Madrid</option>
+            <option>Barcelona</option>
+            <option>Sevilla</option>
+        </select>
+
+        <br><br>
+
+        <!-- Textarea -->
+        <label>Comentarios:</label>
+        <br>
+
+        <textarea rows="5" cols="30"></textarea>
+
+        <br><br>
+
+        <!-- Botones -->
+        <input type="submit" value="Enviar">
+
+        <input type="reset" value="Borrar">
+
+        <button type="button">Botón normal</button>
+
+    </form>
+
+    <hr>
+
+    <!-- DIV -->
+    <div>
+        Esto es un div.
+    </div>
+
+    <!-- SPAN -->
+    <p>
+        Esto es un <span>span</span> dentro de un párrafo.
+    </p>
+
+
+
+    <table border="1">
+        <tr>
+            <td>1</td><td>2</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
