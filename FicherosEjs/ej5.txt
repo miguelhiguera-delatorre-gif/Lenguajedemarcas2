@@ -1,0 +1,123 @@
+Ejercicio 5. Clasificación de incidencias de aula
+Se quiere procesar un fichero incidencias.txt. Cada línea tiene el formato alumno;tipo, donde tipo puede
+ser retraso, tarea, material o comportamiento.
+
+
+Ejemplo de fichero incidencias.txt:
+Pablo:retraso
+Manuel:material
+Diego:tarea
+Beatriz:comportamiento
+
+
+
+a) Define una clase Incidencia con los atributos alumno y tipo.
+public class Incidencia {
+
+    private String alumno;
+    private String tipo;
+
+    public Incidencia(String alumno, String tipo) {
+        this.alumno = alumno;
+        this.tipo = tipo;
+    }
+
+    public String getAlumno() {
+        return alumno;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+}
+
+
+
+b) Lee todas las líneas del fichero y almacena las incidencias en un ArrayList<Incidencia>.
+
+BufferedReader br = new BufferedReader(new FileReader("incidencias.txt"));
+
+String linea;
+
+
+
+ArrayList<Incidencia> inci = new ArrayList<>();
+
+while ((linea = br.readLine()) != null) {
+
+    String[] partes = linea.split(";");
+
+    String alumno = partes[0];
+    String tipo = partes[1];
+
+    Incidencia i = new Incidencia(alumno, tipo);
+
+    inci.add(i);
+}
+
+
+
+c) Usa un HashMap<String, Integer> para contar cuántas incidencias tiene cada alumno.
+
+HashMap<String, Integer> n_inci = new HashMap<>();
+
+for (Incidencia i : inci) {
+
+    String alumno = i.getAlumno();
+
+    n_inci.put(alumno,n_inci.getOrDefault(alumno, 0) + 1);
+}
+
+
+
+
+
+d) Usa otro HashMap<String, Integer> para contar cuántas incidencias hay de cada tipo.
+
+HashMap<String, Integer> tipos = new HashMap<>();
+
+for (Incidencia i : inci) { //recorremos el ArrayList   
+
+    String tipo = i.getTipo(); //cogemos el tipo de incidencia
+
+    tipos.put(tipo,tipos.getOrDefault(tipo, 0) + 1); 
+    //sumamos 1 en el hashmap y con get or default cogemos el valor de tipo lo que hacemos es   
+    //le sumamos 1
+    //si el tipo existe -> devuelve su valor
+    //si no existe -> devuelve 0
+}   
+
+
+
+e) Escribe en informe_incidencias.txt dos apartados: incidencias por alumno e incidencias por tipo.
+
+//Aqui lo que hacemos es escribir texto en un archivo 
+PrintWriter pw = new PrintWriter(new FileWriter("informe_incidencias.txt")); 
+
+pw.println("INCIDENCIAS POR ALUMNO");
+pw.println();
+
+//Escrbimos contenido en el hashmap 
+for (String alumno : n_inci.keySet()) {
+    pw.println(alumno + " -> " + n_inci.get(alumno));
+}
+
+pw.println();
+pw.println("INCIDENCIAS POR TIPO");
+pw.println();
+
+for (String tipo : tipos.keySet()) {  //el keyset devuelve todas las claves y las recorremos con for 
+    pw.println(tipo + " -> " + tipos.get(tipo));
+}
+
+mostramos el tipo de incidencia y su valor que es el numero de veces que hay esa incidencia
+
+
+
+f) No es necesario ordenar por número de incidencias, pero sí ordenar alfabéticamente los nombres de alumnos antes de escribirlos.
+
+ArrayList<String> alumnosOrdenados = new ArrayList<>(n_inci.keySet());
+
+Collections.sort(alumnosOrdenados);
+
+

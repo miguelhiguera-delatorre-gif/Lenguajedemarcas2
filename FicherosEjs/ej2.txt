@@ -1,0 +1,45 @@
+Ejercicio 2. Errores habituales al mezclar colecciones
+
+El siguiente código intenta eliminar de una lista los nombres de alumnos que aparecen en un HashMap de bajas, pero contiene varios errores.
+
+ArrayList<String> alumnos = new ArrayList<String>();
+
+HashMap<String, String> bajas = new HashMap<String, String>();
+
+// alumnos y bajas ya tienen datos cargados
+
+for (String a : alumnos) {
+    if (bajas.get(a).equals("SI")) {
+        alumnos.remove(a);
+    }
+}
+Objetivos
+Evitar borrar elementos dentro de un for-each
+Evitar errores si el alumno no existe en el HashMap
+Eliminar de alumnos los nombres marcados con "SI"
+Código corregido
+for (int i = alumnos.size() - 1; i >= 0; i--) {
+
+    String alumno = alumnos.get(i);
+
+    String estado = bajas.get(alumno);
+
+    if (estado != null) {
+
+        if (estado.equals("SI")) {
+
+            alumnos.remove(i);
+
+        }
+
+    }
+
+}
+
+Este código cumple los tres apartados:
+
+No usa remove() dentro de un for-each
+Comprueba si la clave existe con estado != null
+Elimina correctamente los alumnos con "SI"
+
+

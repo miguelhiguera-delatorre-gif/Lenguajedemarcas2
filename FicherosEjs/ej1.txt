@@ -1,0 +1,61 @@
+Ejercicio 1. Traza de una lista de códigos
+
+Observa el siguiente fragmento. Indica el contenido final de la lista y el valor final de la variable repetidos.
+
+No hace falta escribir un programa completo.
+
+ArrayList<String> codigos = new ArrayList<String>();
+
+codigos.add("A12");
+codigos.add("B07");
+codigos.add("A12");
+codigos.add("C30");
+codigos.add("B07");
+
+int repetidos = 0;
+
+ArrayList<String> vistos = new ArrayList<String>();
+
+for (String c : codigos) {
+    if (vistos.contains(c)) {
+        repetidos++;
+    } else {
+        vistos.add(c);
+    }
+}
+
+codigos.remove("A12");
+
+codigos.set(1, "D99");
+a) Contenido final de codigos
+
+codigos.remove("A12"); elimina la primera aparición de "A12".
+
+codigos.set(1, "D99"); cambia el elemento de la posición 1 por "D99".
+
+Resultado final de codigos:
+
+[B07, D99, C30, B07]
+
+
+b) Contenido final de vistos
+
+Se recorre la lista codigos y se añade cada código a vistos solo si no estaba ya repetido.
+
+Resultado final de vistos:
+
+[A12, B07, C30]
+
+
+c) Valor final de repetidos
+repetidos = 2
+
+Porque aparecen repetidos:
+
+"A12"
+"B07"
+
+
+d) Explica por qué remove("A12") no elimina todos los códigos A12
+
+Porque remove("A12") solo elimina la primera aparición encontrada del elemento "A12".

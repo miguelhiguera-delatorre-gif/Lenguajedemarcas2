@@ -1,0 +1,7 @@
+Ejercicio 6. Catálogo de etiquetas
+Un fichero etiquetas.txt contiene líneas con el formato codigo;etiqueta. Puede haber varios códigos con la
+misma etiqueta.
+Ejemplo: P15;urgente
+
+a) Lee el fichero y guarda en un HashMap<String, ArrayList<String>> la relación etiqueta -> lista de códigos.
+

@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(147, 255, 217);
+}
+
+
+.caja{
+     border: 2px solid black;
+    width: 180px;
+    height: 180px;
+    margin: 30px;
+   
+
+}
