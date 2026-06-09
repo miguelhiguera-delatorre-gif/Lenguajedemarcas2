@@ -1,13 +1,24 @@
 body{
-    background-color: rgb(147, 255, 217);
+    background-color: black;
+
+}
+
+.azul{
+    color: aqua;
+    text-align: center;
+}
+
+.uno td{
+    width: 600px;
+    height:50px ;
+    background-color: azure;
+    text-align: center;
 }
 
 
-.caja{
-     border: 2px solid black;
-    width: 180px;
-    height: 180px;
-    margin: 30px;
-   
-
+.dos td{
+    width: 600px;
+    height:200px ;
+    background-color: azure;
+    text-align: center;
 }

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Plantilla Tabla</title>
+
+<style>
+
+    /* =========================
+       ESTILO GENERAL
+    ========================== */
+
+    body{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: #000000;
+        padding: 30px;
+    }
+
+
+    /* =========================
+       TÍTULO
+    ========================== */
+
+    h1{
+        color: yellow;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       TABLA
+    ========================== */
+
+    table{
+
+        border-collapse: collapse;
+        margin: auto;
+
+        background-color: rgb(151, 151, 151);
+
+        border: 3px solid yellow;
+
+        /* MÁS LARGA */
+        width: 1200px;
+
+        table-layout: fixed;
+    }
+
+
+    /* =========================
+       CELDAS
+    ========================== */
+
+    td, th{
+
+        border: 2px solid black;
+
+        /* MÁS FINAS */
+        height: 40px;
+
+        padding: 10px;
+
+        font-size: 18px;
+
+        vertical-align: top;
+    }
+
+
+    /* =========================
+       CABECERA
+    ========================== */
+
+    th{
+        background-color: rgb(151, 151, 151);
+        color: black;
+
+        height: 60px;
+
+        font-size: 24px;
+    }
+
+
+    /* =========================
+       IMAGEN
+    ========================== */
+
+    img{
+
+        /* IMAGEN MÁS PEQUEÑA */
+        width: 80px;
+
+        height: auto;
+
+        display: block;
+
+    }
+
+
+    /* =========================
+       FILAS ESPECIALES
+    ========================== */
+
+    /* Cada fila nueva puede ser más alta */
+
+    .fila2{
+        height: 80px;
+    }
+
+    .fila3{
+        height: 100px;
+    }
+
+    .fila4{
+        height: 120px;
+    }
+
+    .fila5{
+        height: 140px;
+    }
+
+
+    /* =========================
+       CELDAS PERSONALIZADAS
+    ========================== */
+
+    .peque{
+        width: 180px;
+    }
+
+    .grande{
+        width: 300px;
+        text-align: center;
+    }
+
+    .ancha{
+        width: 500px;
+    }
+
+
+    /* INPUT */
+    input{
+        margin-top: 10px;
+        padding: 5px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<h1>PANEL DE CONTROL - ESTRELLA DE LA MUERTE</h1>
+
+
+<table>
+
+    <!-- FILA 1 -->
+    <tr>
+
+        <th colspan="3">
+            SISTEMA OPERATIVO IMPERIAL V.4.0
+        </th>
+
+    </tr>
+
+
+    <!-- FILA 2 -->
+    <tr class="fila2">
+
+        <td>
+            ESTADO:<br>
+            Operativo
+
+            <br><br>
+
+            ZONA:<br>
+            Sector Exterior
+        </td>
+
+        <td class="grande">
+
+            <table border="2">
+                <tr><td></td>
+                <td></td>
+                </tr>
+
+            </table>
+           
+        </td>
+
+        <td>
+            Escudos activos
+        </td>
+
+    </tr>
+
+
+    <!-- FILA 3 -->
+    <tr class="fila3">
+
+        <td>
+            Hangar Principal
+        </td>
+
+        <td class="ancha">
+            Tráfico de cazas TIE operativo
+        </td>
+
+        <td class="peque">
+            3 Activos
+        </td>
+
+    </tr>
+
+
+    <!-- FILA 4 -->
+    <tr class="fila4">
+
+        <td>
+            Comunicaciones
+            <br>
+
+            <input type="text" size="15">
+        </td>
+
+        <td>
+            Canal Imperial abierto
+        </td>
+
+        <td>
+            ONLINE
+        </td>
+
+    </tr>
+
+
+    <!-- FILA 5 -->
+    <tr class="fila5">
+
+        <td>
+            Reactor Principal
+            <br>
+
+            <input type="text" size="15">
+        </td>
+
+        <td>
+            Estabilidad correcta
+        </td>
+
+        <td>
+            100%
+        </td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
